@@ -33,6 +33,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .img-grid
-    background-color: rgb(0, 0, 0 / 100%)
+.img-grid {
+  background-color: rgb(0 0 0 / 100%);
+}
 </style>
