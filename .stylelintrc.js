@@ -2,15 +2,18 @@ module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-recommended-vue',
+    'stylelint-config-prettier',
+    'stylelint-config-prettier-scss',
+    'stylelint-config-standard-scss'
   ],
   overrides: [
     {
       files: ['*.scss', '**/*.scss'],
-      extends: ['stylelint-config-recommended-scss']
+      customSyntax: 'postcss-scss'
     },
     {
       files: ['*.vue', '**/*.vue'],
-      extends: ['stylelint-config-recommended-scss', 'stylelint-config-recommended-vue']
+      customSyntax: 'postcss-html'
     }
   ]
 }

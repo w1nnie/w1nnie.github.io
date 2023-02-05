@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style scoped lang="sass">
+<style scoped lang="scss">
   .img-grid
-    background-color: #000
+    background-color: rgb(0, 0, 0 / 100%)
 </style>

@@ -1,7 +1,7 @@
 <template lang="pug">
-  .content
-    .header-pc
-    .footer-sp
+.content
+  .header-pc
+  .footer-sp
 </template>
 
 <script>
@@ -10,25 +10,24 @@ export default {
 }
 </script>
 
-<style scoped lang="sass">
+<style scoped lang="scss">
 @import "/assets/sass/app.scss"
-@include smartphone
+  @include smartphone
   .header-pc
-    display: none
+  display: none
 
-@include pc
+  @include pc
   .footer-sp
-    display: none
+  display: none
 
-
-.header-pc
+  .header-pc
   position: fixed
   width: 100%
   height: 70px
   top: 0
-  background-color: #f00
+  background-color: f00
 
-.footer-sp
+  .footer-sp
   position: fixed
   width: 100%
   height: 50px

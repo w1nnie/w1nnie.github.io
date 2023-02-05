@@ -1,18 +1,18 @@
 body {
   background-color: $color-bg;
-  margin: 0
+  margin: 0;
 }
 
-$smartphoneBreakpoint: 767px;
+$smartphone-breakpoint: 767px;
 
 @mixin smartphone {
-  @media screen and (max-width: $smartphoneBreakpoint) {
+  @media screen and (max-width: $smartphone-breakpoint) {
     @content;
   }
 }
 
 @mixin pc {
-  @media screen and (min-width: $smartphoneBreakpoint + 1) {
+  @media screen and (min-width: $smartphone-breakpoint + 1) {
     @content;
   }
 }
