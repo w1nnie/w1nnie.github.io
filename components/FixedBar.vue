@@ -1,15 +1,16 @@
 <template lang="pug">
 .content
   .header-pc
-    .top top
-    .about about
-    .works works
-    .contact contact
+    NuxtLink.top(to="/") top
+    .spacing
+    NuxtLink.about(to="/about") about
+    NuxtLink.works(to="/works") works
+    NuxtLink.contact(to="/contact") contact
   .footer-sp
-    .top top
-    .about about
-    .works works
-    .contact contact
+    NuxtLink.top(to="/") top
+    NuxtLink.about(to="/about") about
+    NuxtLink.works(to="/works") works
+    NuxtLink.contact(to="/contact") contact
 </template>
 
 <script>
@@ -22,13 +23,13 @@ export default {
 @import "/assets/sass/app";
 
 .header-pc {
-  position: fixed;
+  position: sticky;
   width: 100vw;
   height: 70px;
   top: 0;
   background-color: rgb(226 25 21 / 100%);
   display: grid;
-  grid-template-columns: 8fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 7fr 1fr 1fr 1fr;
   text-align: center;
 
   * {

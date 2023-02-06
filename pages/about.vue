@@ -1,12 +1,13 @@
 <template lang="pug">
-  .index-container
+  .about-container
     fixedBar
-    h1 this is index page.
+    h1 this is about page.
+
 </template>
 
 <script>
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage'
+  name: 'AboutPage'
 })
