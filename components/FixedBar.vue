@@ -1,5 +1,5 @@
 <template lang="pug">
-.content
+.fixedbar-container
   .header-pc
     NuxtLink.top(to="/") top
     .spacing
@@ -50,6 +50,7 @@ export default {
 
 .footer-sp {
   position: fixed;
+  z-index: 1000;
   width: 100vw;
   height: 50px;
   bottom: 0;

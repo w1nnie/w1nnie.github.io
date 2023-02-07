@@ -1,7 +1,6 @@
 <template lang="pug">
-  .about-container
-    fixedBar
-    h1 this is about page.
+.about-container
+  h1 this is about page.
 
 </template>
 

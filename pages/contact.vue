@@ -1,7 +1,6 @@
 <template lang="pug">
-  .contact-container
-    fixedBar
-    h1 this is contact page.
+.contact-container
+  h1 this is contact page.
 </template>
 
 <script>

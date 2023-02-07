@@ -1,15 +1,12 @@
 <template lang="pug">
-  .works-container
-    fixedBar
-    h1 this is works page.
-    .img-grid(:style="responsiveColumns")
-      .item(v-for="(item, index) in data"
-       :style="itemHeight")
+.works-container
+  h1 this is works page.
+  .img-grid(:style="responsiveColumns")
+    .item(v-for="(item, index) in data"
+      :style="itemHeight")
 </template>
 
 <script>
-import { Repeat } from 'immutable'
-
 export default {
   name: 'WorksPage',
   data() {
@@ -24,20 +21,13 @@ export default {
       this.handleResize()
     }
   },
-  destroyed() {
-    if (process.client) {
-      window.removeEventListener('resize', this.handleResize)
-    }
-  },
   methods: {
     handleResize() {
       this.width = window.innerWidth
-      console.log(this.width);
     },
   },
   computed: {
     responsiveColumns: function() {
-      console.log(this.columns);
       if (this.width > 1000) {
         // this.columns = 5;
         return {
@@ -68,6 +58,11 @@ export default {
           "height": "49.5vw"
         }
       }
+    }
+  },
+  destroyed() {
+    if (process.client) {
+      window.removeEventListener('resize', this.handleResize)
     }
   }
 }
