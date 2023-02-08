@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@use "sass:math";
 @import "/assets/sass/app";
 
 .transition {
@@ -33,6 +34,7 @@ export default {
 .pixel {
   background-color: rgb(100 200 255 / 100%);
   opacity: 0;
+  overflow: hidden;
 }
 
 @include smartphone {
@@ -43,7 +45,13 @@ export default {
   }
 
   .pixel {
-    height: 6.25 vw;
+    height: calc(100 / 16) vw;
+  }
+
+  @for $i from 0 through 143 {
+    .pixel-#{$i} {
+      transition-delay: #{math.div(math.floor(math.div($i, 9)) + $i % 9, 80) + "s"};
+    }
   }
 }
 
@@ -55,24 +63,14 @@ export default {
   }
 
   .pixel {
-    height: 11 vw;
+    height: calc(100 / 9) vw;
+  }
+
+  @for $i from 0 through 143 {
+    .pixel-#{$i} {
+      transition-delay: #{math.div(math.floor(math.div($i, 16)) + $i % 16, 80) + "s"};
+    }
   }
 }
-
-@for $i from 0 through 143 {
-  .pixel-#{$i} {
-    transition-delay: #{calc($i / 286) + "s"};
-  }
-}
-
-// var $pixel = $('.pixel');
-// $item.each(function(index) {
-//   var column = Math.floor(index % 9);
-//   var row = Math.floor(index / 16);
-//   var delay = 1*column + 1 + row;
-//   %(this).css({
-//     'transition-delay': delay + 's'
-//   });
-// });
 
 </style>
