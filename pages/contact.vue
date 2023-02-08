@@ -1,5 +1,6 @@
 <template lang="pug">
 .contact-container
+  CustomTransition
   h1 this is contact page.
 </template>
 

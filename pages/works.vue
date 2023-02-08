@@ -1,5 +1,6 @@
 <template lang="pug">
 .works-container
+  CustomTransition
   h1 this is works page.
   .img-grid(:style="responsiveColumns")
     .item(v-for="(item, index) in data"

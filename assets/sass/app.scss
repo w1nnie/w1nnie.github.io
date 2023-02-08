@@ -6,7 +6,7 @@
 
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.4s;
+  transition: opacity 0.5s;
 }
 
 .page-enter,
@@ -14,18 +14,26 @@
   opacity: 1;
 }
 
-.page-enter-active .transition {
-  transition: transform 0.4s;
+.page-enter-active .pixel {
+  transition: opacity transform 0.5s;
 }
 
-.page-leave-active .transition {
-  transition: transform 0.4s;
+.page-leave-active .pixel {
+  transition: opacity transform 0.5s;
 }
 
-.page-enter .transition {
-  transform: translateX(-500px);
+.page-leave .pixel {
+  opacity: 0;
 }
 
-.page-leave-to .transition {
-  transform: translateX(-500px);
+.page-leave-to .pixel {
+  opacity: 1;
+}
+
+.page-enter .pixel {
+  opacity: 1;
+}
+
+.page-enter-to .pixel {
+  opacity: 0;
 }

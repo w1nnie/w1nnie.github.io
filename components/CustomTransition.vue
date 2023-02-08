@@ -1,6 +1,6 @@
 <template lang="pug">
 .transition
-  .pixel(v-for="index in generatePixels")
+  .pixel(v-for="(item, index) in generatePixels" :class="`pixel-${index}`")
 </template>
 
 <script>
@@ -32,6 +32,7 @@ export default {
 
 .pixel {
   background-color: rgb(100 200 255 / 100%);
+  opacity: 0;
 }
 
 @include smartphone {
@@ -57,4 +58,21 @@ export default {
     height: 11 vw;
   }
 }
+
+@for $i from 0 through 143 {
+  .pixel-#{$i} {
+    transition-delay: #{calc($i / 286) + "s"};
+  }
+}
+
+// var $pixel = $('.pixel');
+// $item.each(function(index) {
+//   var column = Math.floor(index % 9);
+//   var row = Math.floor(index / 16);
+//   var delay = 1*column + 1 + row;
+//   %(this).css({
+//     'transition-delay': delay + 's'
+//   });
+// });
+
 </style>
