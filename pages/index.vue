@@ -1,5 +1,6 @@
 <template lang="pug">
 .index-container
+  CustomTransition
   h1 this is index page.
 </template>
 

@@ -25,7 +25,7 @@ export default {
 .header-pc {
   position: sticky;
   width: 100vw;
-  height: 70px;
+  height: 7dvh;
   top: 0;
   background-color: rgb(226 25 21 / 100%);
   display: grid;
@@ -52,7 +52,7 @@ export default {
   position: fixed;
   z-index: 1000;
   width: 100vw;
-  height: 50px;
+  height: 6dvh;
   bottom: 0;
   background-color: rgb(226 25 21 / 100%);
   display: grid;

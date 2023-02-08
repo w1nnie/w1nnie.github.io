@@ -6,12 +6,26 @@
 
 .page-enter-active,
 .page-leave-active {
-  transition: transform 0.4s;
-  transform-origin: top;
+  transition: opacity 0.4s;
 }
 
 .page-enter,
 .page-leave-to {
-  transform: scale(0.8) rotateX(-90deg);
-  transform-origin: top;
+  opacity: 1;
+}
+
+.page-enter-active .transition {
+  transition: transform 0.4s;
+}
+
+.page-leave-active .transition {
+  transition: transform 0.4s;
+}
+
+.page-enter .transition {
+  transform: translateX(-500px);
+}
+
+.page-leave-to .transition {
+  transform: translateX(-500px);
 }
