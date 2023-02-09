@@ -15,27 +15,37 @@
 }
 
 .page-enter-active .pixel {
-  transition: opacity transform 0.5s;
+  transition-property: opacity;
+  transition-duration: 0.1s;
 }
 
 .page-leave-active .pixel {
-  transition: opacity transform 0.5s;
+  transition-property: opacity;
+  transition-duration: 0.1s;
 }
 
 .page-leave .pixel {
   opacity: 0;
+
+  // transform: scaleX(0);
 }
 
 .page-leave-to .pixel {
   opacity: 1;
+
+  // transform: scaleX(1);
 }
 
 .page-enter .pixel {
   opacity: 1;
+
+  // transform: scaleX(1);
 }
 
 .page-enter-to .pixel {
   opacity: 0;
+
+  // transform: scaleX(0);
 }
 
 body {

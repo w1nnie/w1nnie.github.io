@@ -24,11 +24,13 @@ export default {
 @use "sass:math";
 @import "/assets/sass/app";
 
+$duration-division: 80;
+
 .transition {
   position: fixed;
   width: 100%;
   display: grid;
-  gap: 1px;
+  gap: 0;
 }
 
 .pixel {
@@ -50,7 +52,7 @@ export default {
 
   @for $i from 0 through 143 {
     .pixel-#{$i} {
-      transition-delay: #{math.div(math.floor(math.div($i, 9)) + $i % 9, 80) + "s"};
+      transition-delay: #{math.div(math.floor(math.div($i, 9)) + $i % 9, $duration-division) + "s"};
     }
   }
 }
@@ -68,7 +70,7 @@ export default {
 
   @for $i from 0 through 143 {
     .pixel-#{$i} {
-      transition-delay: #{math.div(math.floor(math.div($i, 16)) + $i % 16, 80) + "s"};
+      transition-delay: #{math.div(math.floor(math.div($i, 16)) + $i % 16, $duration-division) + "s"};
     }
   }
 }
