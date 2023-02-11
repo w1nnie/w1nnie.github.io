@@ -22,9 +22,6 @@ export default {
 <style scoped lang="scss">
 @import "/assets/sass/app";
 
-$bg-color: rgb(0 165 191);
-$text-hover-color: rgb(0 200 240);
-
 a {
   text-decoration: none;
   color: #fff;
@@ -36,7 +33,7 @@ a {
   width: 100vw;
   height: 7dvh;
   top: 0;
-  background-color: $bg-color;
+  background-color: $theme-color;
   display: grid;
   grid-template-columns: 1fr 7fr 1fr 1fr 1fr;
   text-align: center;
@@ -66,7 +63,7 @@ a {
   width: 100vw;
   height: 6dvh;
   bottom: 0;
-  background-color: $bg-color;
+  background-color: $theme-color;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;

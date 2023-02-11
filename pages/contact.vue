@@ -1,7 +1,9 @@
 <template lang="pug">
 .contact-container
   CustomTransition
-  h1 this is contact page.
+  .caution ご依頼の前に
+  .address ご依頼はこちらから
+     p gmail
 </template>
 
 <script>

@@ -71,14 +71,13 @@ export default {
 
 <style scoped lang="scss">
 .img-grid {
-  background-color: rgb(128 128 128 / 100%);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 1px;
   row-gap: 1px;
 
   div {
-    background-color: lightcyan;
+    background-color: cyan;
   }
 }
 </style>
