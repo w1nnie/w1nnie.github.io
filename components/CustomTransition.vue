@@ -34,7 +34,7 @@ $duration-division: 80;
 }
 
 .pixel {
-  background-color: rgb(100 200 255 / 100%);
+  background-color: $theme-color;
   opacity: 0;
   overflow: hidden;
   display: none;
