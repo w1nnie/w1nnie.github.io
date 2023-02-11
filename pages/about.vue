@@ -1,7 +1,7 @@
 <template lang="pug">
 .about-container
   CustomTransition
-  .profile
+  .section.profile
     .title Profile
     .profile-container
       .icon
@@ -11,8 +11,22 @@
           .do Do Pixelart 動画編集
           .like Like Webdesign Illustration
           .interest Live2D AR ゲーム制作 3DCG
-  .achievement Achievement
-  .links Links
+  .section.achievement
+    .title Achievement
+    .achievement-container
+      .item
+        .thumbnail
+        .text 動画編集 よりぬき
+      .item
+        .thumbnail
+        .text ドット絵 配信ED
+      .item
+        .thumbnail
+        .text イラスト 配信背景
+      .item
+        .thumbnail
+        .text webアプリ マジカルミライ10th Anniversary
+  .section.links Links
 
 </template>
 
@@ -31,8 +45,12 @@ export default Vue.extend({
   font-size: 4vw;
 }
 
-.profile {
+.section {
   padding: 2vw;
+}
+
+.profile {
+  // padding: 2vw;
 
   .title {
     width: 100%;
@@ -54,6 +72,32 @@ export default Vue.extend({
       }
 
       .skills {
+        font-size: 2vw;
+      }
+    }
+  }
+}
+
+.achievement {
+  .title {
+    width: 100%;
+  }
+
+  .achievement-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .item {
+      display: flex;
+
+      .thumbnail {
+        width: 20vw;
+        background-color: $theme-color;
+      }
+
+      .text {
+        width: 70vw;
         font-size: 2vw;
       }
     }
