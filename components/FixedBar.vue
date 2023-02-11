@@ -22,23 +22,35 @@ export default {
 <style scoped lang="scss">
 @import "/assets/sass/app";
 
+$bg-color: rgb(0 165 191);
+$text-hover-color: rgb(0 200 240);
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 3vh;
+}
+
 .header-pc {
   position: sticky;
   width: 100vw;
   height: 7dvh;
   top: 0;
-  background-color: rgb(226 25 21 / 100%);
+  background-color: $bg-color;
   display: grid;
   grid-template-columns: 1fr 7fr 1fr 1fr 1fr;
   text-align: center;
+  line-height: 7dvh;
+  text-decoration: none;
 
-  * {
-    background-color: rgb(255 255 0 / 100%);
-    margin: 5px;
+  *:hover {
+    color: $text-hover-color;
+    transition: 0.3s;
   }
 
   .top {
     text-align: left;
+    padding-left: 2dvh;
   }
 }
 
@@ -54,14 +66,14 @@ export default {
   width: 100vw;
   height: 6dvh;
   bottom: 0;
-  background-color: rgb(226 25 21 / 100%);
+  background-color: $bg-color;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;
+  line-height: 6dvh;
 
-  * {
-    background-color: rgb(255 255 0 / 100%);
-    margin: 5px;
+  a {
+    font-size: 2.5vh;
   }
 }
 

@@ -37,6 +37,7 @@ $duration-division: 80;
   background-color: rgb(100 200 255 / 100%);
   opacity: 0;
   overflow: hidden;
+  display: none;
 }
 
 @include smartphone {

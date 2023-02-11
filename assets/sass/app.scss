@@ -16,36 +16,22 @@
 
 .page-enter-active .pixel {
   transition-property: opacity;
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
+  display: block;
 }
 
 .page-leave-active .pixel {
   transition-property: opacity;
-  transition-duration: 0.1s;
-}
-
-.page-leave .pixel {
-  opacity: 0;
-
-  // transform: scaleX(0);
+  transition-duration: 0.2s;
+  display: block;
 }
 
 .page-leave-to .pixel {
   opacity: 1;
-
-  // transform: scaleX(1);
 }
 
 .page-enter .pixel {
   opacity: 1;
-
-  // transform: scaleX(1);
-}
-
-.page-enter-to .pixel {
-  opacity: 0;
-
-  // transform: scaleX(0);
 }
 
 body {
