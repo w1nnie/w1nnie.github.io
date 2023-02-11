@@ -30,7 +30,7 @@ a {
 
 .header-pc {
   position: sticky;
-  width: 100vw;
+  width: 100%;
   height: 7dvh;
   top: 0;
   background-color: $theme-color;

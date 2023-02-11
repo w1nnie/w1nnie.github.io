@@ -8,9 +8,9 @@
       .bio
         .name しろねぎ
         .skills
-          .do Do Pixelart 動画編集
-          .like Like Webdesign Illustration
-          .interest Live2D AR ゲーム制作 3DCG
+          .do Do <span>Pixelart 動画編集</span>
+          .like Like <span>Webdesign Illustration</span>
+          .interest Interest <span>Live2D AR ゲーム制作 3DCG</span>
   .section.achievement
     .title Achievement
     .achievement-container
@@ -72,7 +72,21 @@ export default Vue.extend({
       }
 
       .skills {
-        font-size: 2vw;
+        span {
+          margin-left: 2vw;
+        }
+
+        .do {
+          font-size: 3vw;
+        }
+
+        .like {
+          font-size: 2.2vw;
+        }
+
+        .interest {
+          font-size: 1.3vw;
+        }
       }
     }
   }
@@ -109,8 +123,8 @@ export default Vue.extend({
     flex-direction: row;
 
     .icon {
-      width: 40vw;
-      height: 40vw;
+      width: 33vw;
+      height: 33vw;
     }
 
     .bio {
