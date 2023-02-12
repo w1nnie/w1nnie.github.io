@@ -41,7 +41,7 @@ a {
   text-decoration: none;
 
   *:hover {
-    color: $text-hover-color;
+    color: $sub-color;
     transition: 0.3s;
   }
 
@@ -60,7 +60,7 @@ a {
 .footer-sp {
   position: fixed;
   z-index: 1000;
-  width: 100vw;
+  width: 100%;
   height: 6dvh;
   bottom: 0;
   background-color: $theme-color;
