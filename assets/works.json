@@ -1,0 +1,100 @@
+[
+  {
+    "filename": "amamya_ending",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "配信エンディング",
+    "desc": "po",
+    "date": 20221202,
+    "position": "60% 30%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵", "自主制作"
+    ]
+  },
+  {
+    "filename": "steria_room",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "absorbed in",
+    "desc": "po",
+    "date": 20211027,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "steria_town",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "視点変換",
+    "desc": "po",
+    "date": 20220213,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "birds-eye",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "日常",
+    "desc": "po",
+    "date": 20230226,
+    "position": "75% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "paging",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "a green witch",
+    "desc": "po",
+    "date": 20221117,
+    "position": "75% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "yurayura",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "日常",
+    "desc": "po",
+    "date": 20230211,
+    "position": "75% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "vil-in-cave",
+    "raw_ext": ".png",
+    "thm_ext": ".png",
+    "title": "vil",
+    "desc": "po",
+    "date": 20230226,
+    "position": "75% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  }
+]
