@@ -98,56 +98,57 @@
     ]
   },
   {
-    "filename": "vil-in-cave",
-    "raw_ext": ".png",
+    "filename": "ARpostcard",
+    "raw_ext": ".gif",
     "thm_ext": ".png",
-    "title": "vil",
+    "title": "ARポストカード",
     "desc": "po",
-    "date": 20230226,
+    "date": 20231021,
     "position": "75% 50%",
     "links": "",
     "linkText": "",
     "tags": [
-        "ドット絵"
+        "AR"
     ]
   },
   {
-    "filename": "vil-in-cave",
-    "raw_ext": ".png",
+    "filename": "collection",
+    "raw_ext": ".gif",
     "thm_ext": ".png",
-    "title": "vil",
+    "title": "Collections",
     "desc": "po",
-    "date": 20230226,
+    "date": 20230722,
     "position": "75% 50%",
-    "links": "",
+    "links": "https://youtu.be/5pJb8u2EJZk",
     "linkText": "",
     "tags": [
-        "ドット絵"
+        "ドット絵",
+        "MV"
     ]
   },
   {
-    "filename": "vil-in-cave",
-    "raw_ext": ".png",
+    "filename": "emotionalizer",
+    "raw_ext": ".gif",
     "thm_ext": ".png",
-    "title": "vil",
+    "title": "エモーショナライザー",
     "desc": "po",
-    "date": 20230226,
+    "date": 20220902,
     "position": "75% 50%",
-    "links": "",
+    "links": "https://youtu.be/grd5_wgrM14?t=1720",
     "linkText": "",
     "tags": [
-        "ドット絵"
+        "webアプリ"
     ]
   },
   {
-    "filename": "vil-in-cave",
-    "raw_ext": ".png",
+    "filename": "yorinuki",
+    "raw_ext": ".gif",
     "thm_ext": ".png",
-    "title": "vil",
+    "title": "よりぬきあまみゃちゃん",
     "desc": "po",
-    "date": 20230226,
+    "date": 20220711,
     "position": "75% 50%",
-    "links": "",
+    "links": "https://youtube.com/playlist?list=PLPockELP1a45P9CSar3AcJkWurxJYpimF&si=i_UF7kElciRFVS5H",
     "linkText": "",
     "tags": [
         "ドット絵"

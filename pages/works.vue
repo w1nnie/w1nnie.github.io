@@ -146,7 +146,7 @@ export default {
   }
 }
 
-img.item-img {
+.item-img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -157,6 +157,11 @@ img.item-img {
   height: 80vh;
   background-color: gray;
   display: inline-block;
+
+  img {
+    width: 80%;
+    height: auto;
+  }
 }
 
 </style>
