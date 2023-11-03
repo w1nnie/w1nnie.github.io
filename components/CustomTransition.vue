@@ -31,10 +31,12 @@ $duration-division: 80;
   width: 100%;
   display: grid;
   gap: 0;
+  user-select: none;
+  pointer-events: none;
 }
 
 .pixel {
-  background-color: $theme-color;
+  background-color: $bg-color;
   opacity: 0;
   overflow: hidden;
   display: none;

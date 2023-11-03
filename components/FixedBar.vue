@@ -25,7 +25,7 @@ export default {
 a {
   text-decoration: none;
   color: #fff;
-  font-size: 3vh;
+  font-size: 2.4vh;
 }
 
 .header-pc {
@@ -35,7 +35,7 @@ a {
   top: 0;
   background-color: $theme-color;
   display: grid;
-  grid-template-columns: 1fr 7fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 9fr 1fr 1fr 1fr;
   text-align: center;
   line-height: 7dvh;
   text-decoration: none;

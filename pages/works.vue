@@ -1,15 +1,18 @@
 <template lang="pug">
 .works-container
   CustomTransition
-  h1 this is works page.
   .works-tags
     .works-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{displayTagList[index]}}
-  transition-group.graphics-item-container(name="filter")
-  .img-grid(:style="responsiveColumns")
-    .item(v-for="(item, index) in sortedData"
-     :style="itemHeight"
-     :key="item.date")
-      img.item-img(:style="{objectPosition: item.position}" :src="require(`/static/images/${item.filename}${item.thm_ext}`)")
+  .img-grid-wrapper
+    transition-group.graphics-item-container(name="filter")
+    .img-grid(:style="responsiveColumns")
+      .item(v-for="(item, index) in sortedData"
+      :style="itemHeight"
+      :key="item.date"
+      @click="displayItem(item, index)")
+        img.item-img(:style="{objectPosition: item.position}" :src="require(`/static/images/${item.filename}${item.thm_ext}`)")
+  .display
+    img(:src="require(`/static/images/${displayUrl}`)")
 </template>
 
 <script>
@@ -31,7 +34,8 @@ export default {
       inactiveClass: "graphics-tags-item",
       isShow: false,
       showIndex: 0,
-      show: true
+      show: true,
+      displayUrl: "steria_room.gif"
     }
   },
   created() {
@@ -54,6 +58,9 @@ export default {
         this.activeTagFlags.fill(false);
         this.activeTagFlags[index] = true;
       }
+    },
+    displayItem(item) {
+      this.displayUrl = item.filename + item.raw_ext;
     }
   },
   computed: {
@@ -97,7 +104,7 @@ export default {
       if (this.width > 1000) {
         // this.columns = 5;
         return {
-          "height": "19.8vw"
+          "height": "8.8vw"
         }
       } else if (this.width > 768) {
         return {
@@ -119,20 +126,37 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.img-grid-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  width: 50vw;
+  height: 80vh;
+  overflow-y: auto;
+}
+
 .img-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 1px;
-  row-gap: 1px;
+  column-gap: 1vw;
+  row-gap: 2vw;
+  padding: 2vw;
 
   div {
-    background-color: cyan;
+    // background-color: cyan;
   }
 }
 
-img {
+img.item-img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
+
+.display {
+  width: 48vw;
+  height: 80vh;
+  background-color: gray;
+  display: inline-block;
+}
+
 </style>
