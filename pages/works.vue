@@ -3,16 +3,19 @@
   CustomTransition
   .works-tags
     .works-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{displayTagList[index]}}
-  .img-grid-wrapper
+  .img-grid-wrapper(:style="{transform: deg}")
     transition-group.graphics-item-container(name="filter")
     .img-grid(:style="responsiveColumns")
       .item(v-for="(item, index) in sortedData"
-      :style="itemHeight"
+      :style="{height: itemHeight}"
       :key="item.date"
-      @click="displayItem(item, index)")
-        img.item-img(:style="{objectPosition: item.position}" :src="require(`/static/images/${item.filename}${item.thm_ext}`)")
-  .display
-    img(:src="require(`/static/images/${displayUrl}`)")
+      @click="openModal(item)")
+        img.item-img(tabindex=-1 :style="{objectPosition: item.position}" :src="require(`/static/images/${item.filename}${item.raw_ext}`)")
+  .po(@click="changeDeg()")
+  .modal-wrapper(:style="{display: isModalVisible}")
+    .modal-bg(@click="closeModal()")
+    .modal-content
+      img(:src="require(`/static/images/${selectedImageUrl}${selectedImageExt}`)")
 </template>
 
 <script>
@@ -23,11 +26,10 @@ export default {
   data() {
     return {
       width: 0,
-      data: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
       worksData,
-      tagList: ["ドット絵", "動画編集"],
-      displayTagList: ["ドット絵", "動画編集"],
-      activeTagFlags: [false, false],
+      tagList: ["ドット絵", "動画編集", "webアプリ"],
+      displayTagList: ["ドット絵", "動画編集", "webアプリ"],
+      activeTagFlags: [false, false, false],
       activeTagIndex: -1,
       oldActiveTagIndex: 0,
       activeClass: "graphics-tags-item-active",
@@ -35,7 +37,11 @@ export default {
       isShow: false,
       showIndex: 0,
       show: true,
-      displayUrl: "steria_room.gif"
+      deg: "rotate3d(0, 1, 0, 0deg)",
+      isChangedDeg: "none",
+      selectedImageUrl: "steria_town",
+      selectedImageExt: ".gif",
+      isModalVisible: false
     }
   },
   created() {
@@ -59,8 +65,22 @@ export default {
         this.activeTagFlags[index] = true;
       }
     },
-    displayItem(item) {
-      this.displayUrl = item.filename + item.raw_ext;
+    changeDeg() {
+      if(!this.isChangedDeg) {
+        this.deg = "rotate3d(0, 1, 0, 10deg)";
+        this.isChangedDeg = true;
+      } else {
+        this.deg = "rotate3d(0, 1, 0, 0deg)";
+        this.isChangedDeg = false;
+      }
+    },
+    openModal(item) {
+      this.isModalVisible = "block";
+      this.selectedImageUrl = item.filename;
+      this.selectedImageExt = item.raw_ext;
+    },
+    closeModal() {
+      this.isModalVisible = "none";
     }
   },
   computed: {
@@ -126,12 +146,31 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.works-container {
+  perspective: 1000px;
+  overflow: hidden;
+  width: 100vw;
+  height: 90vh;
+  image-rendering: pixelated;
+}
+
 .img-grid-wrapper {
+  position: absolute;
+  left: 10vw;
   display: inline-block;
   vertical-align: top;
-  width: 50vw;
+  width: 80vw;
   height: 80vh;
-  overflow-y: auto;
+  overflow-x: visible;
+  overflow-y: scroll;
+  transform: rotate3d(0, 1, 0, 0deg);
+
+  // background-color: blue;
+  transition: transform 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .img-grid {
@@ -140,28 +179,60 @@ export default {
   column-gap: 1vw;
   row-gap: 2vw;
   padding: 2vw;
-
-  div {
-    // background-color: cyan;
-  }
 }
 
 .item-img {
   width: 100%;
   height: auto;
   object-fit: cover;
-}
+  cursor: pointer;
 
-.display {
-  width: 48vw;
-  height: 80vh;
-  background-color: gray;
-  display: inline-block;
-
-  img {
-    width: 80%;
-    height: auto;
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-out;
   }
 }
 
+.po {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  position: fixed;
+  top: calc(80vh - 30px);
+  right: 0;
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+
+  .modal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #777;
+    opacity: 0.7;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 15vw;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
 </style>
