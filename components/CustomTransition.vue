@@ -33,6 +33,7 @@ $duration-division: 80;
   gap: 0;
   user-select: none;
   pointer-events: none;
+  z-index: 10000;
 }
 
 .pixel {

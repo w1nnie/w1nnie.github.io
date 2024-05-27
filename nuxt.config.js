@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Portfolio2023',
+    title: 'Portfolio',
     htmlAttrs: {
       lang: 'en',
     },
@@ -26,6 +26,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/adobe-fonts',
+    '~/plugins/vue-youtube'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

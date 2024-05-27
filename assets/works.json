@@ -4,13 +4,13 @@
     "raw_ext": ".gif",
     "thm_ext": ".png",
     "title": "配信エンディング",
-    "desc": "po",
+    "desc": "にじさんじ所属ライバー「天宮こころ」様の配信エンディング動画を制作させていただきました。",
     "date": 20221202,
     "position": "60% 30%",
     "links": "",
     "linkText": "",
     "tags": [
-        "ドット絵", "自主制作"
+        "ドット絵", "依頼制作", "配信素材"
     ]
   },
   {
@@ -18,7 +18,7 @@
     "raw_ext": ".gif",
     "thm_ext": ".png",
     "title": "absorbed in",
-    "desc": "po",
+    "desc": "恍惚と一輪の藤の花を見つめる",
     "date": 20211027,
     "position": "50% 50%",
     "links": "",
@@ -32,23 +32,9 @@
     "raw_ext": ".gif",
     "thm_ext": ".png",
     "title": "視点変換",
-    "desc": "po",
+    "desc": "クォータービューから透視投影へ",
     "date": 20220213,
     "position": "50% 50%",
-    "links": "",
-    "linkText": "",
-    "tags": [
-        "ドット絵"
-    ]
-  },
-  {
-    "filename": "birds-eye",
-    "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "日常",
-    "desc": "po",
-    "date": 20230226,
-    "position": "75% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -74,7 +60,7 @@
     "raw_ext": ".gif",
     "thm_ext": ".png",
     "title": "日常",
-    "desc": "po",
+    "desc": "ゆらゆら",
     "date": 20230211,
     "position": "75% 50%",
     "links": "",
@@ -88,13 +74,13 @@
     "raw_ext": ".gif",
     "thm_ext": ".png",
     "title": "ARポストカード",
-    "desc": "po",
+    "desc": "かざすとARで絵が動き出すポストカード",
     "date": 20231021,
     "position": "75% 50%",
     "links": "",
     "linkText": "",
     "tags": [
-        "AR"
+        "プログラミング"
     ]
   },
   {
@@ -102,14 +88,13 @@
     "raw_ext": ".gif",
     "thm_ext": ".png",
     "title": "Collections",
-    "desc": "po",
+    "desc": "廻世るり様の「Collections」のMVを制作させていただきました。",
     "date": 20230722,
     "position": "75% 50%",
-    "links": "https://youtu.be/5pJb8u2EJZk",
+    "links": "5pJb8u2EJZk",
     "linkText": "",
     "tags": [
-        "ドット絵",
-        "MV"
+        "ドット絵", "MV", "依頼制作"
     ]
   },
   {
@@ -120,10 +105,10 @@
     "desc": "po",
     "date": 20220902,
     "position": "75% 50%",
-    "links": "https://youtu.be/grd5_wgrM14?t=1720",
+    "links": "grd5_wgrM14",
     "linkText": "",
     "tags": [
-        "webアプリ"
+        "webアプリ", "プログラミング"
     ]
   },
   {
@@ -134,24 +119,24 @@
     "desc": "po",
     "date": 20220711,
     "position": "75% 50%",
-    "links": "https://youtube.com/playlist?list=PLPockELP1a45P9CSar3AcJkWurxJYpimF&si=i_UF7kElciRFVS5H",
+    "links": "5jCu10bP7Ng",
     "linkText": "",
     "tags": [
-        "動画編集"
+        "動画編集", "依頼制作"
     ]
   },
   {
-    "filename": "steria_room",
+    "filename": "sunset_memory",
     "raw_ext": ".gif",
     "thm_ext": ".png",
-    "title": "absorbed in",
+    "title": "sunset memory",
     "desc": "po",
-    "date": 20211026,
+    "date": 20240215,
     "position": "50% 50%",
-    "links": "",
+    "links": "XK9wUNUBvsI",
     "linkText": "",
     "tags": [
-        "ドット絵"
+        "ドット絵", "依頼制作", "MV"
     ]
   },
   {

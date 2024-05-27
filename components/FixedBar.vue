@@ -4,12 +4,12 @@
     NuxtLink.top(to="/") top
     .spacing
     NuxtLink.about(to="/about") about
-    NuxtLink.works(to="/works") works
+    NuxtLink.works(to="/works") gallery
     NuxtLink.contact(to="/contact") contact
   .footer-sp
     NuxtLink.top(to="/") top
     NuxtLink.about(to="/about") about
-    NuxtLink.works(to="/works") works
+    NuxtLink.works(to="/works") gallery
     NuxtLink.contact(to="/contact") contact
 </template>
 
@@ -24,7 +24,7 @@ export default {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: $theme-color;
   font-size: 2.4vh;
 }
 
@@ -33,7 +33,8 @@ a {
   width: 100%;
   height: 7dvh;
   top: 0;
-  background-color: $theme-color;
+
+  // background-color: #000;
   display: grid;
   grid-template-columns: 1fr 9fr 1fr 1fr 1fr;
   text-align: center;
@@ -63,7 +64,7 @@ a {
   width: 100%;
   height: 6dvh;
   bottom: 0;
-  background-color: $theme-color;
+  background-color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;

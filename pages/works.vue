@@ -2,20 +2,25 @@
 .works-container
   CustomTransition
   .works-tags
-    .works-tags-item(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : '', inactiveClass]") {{displayTagList[index]}}
-  .img-grid-wrapper(:style="{transform: deg}")
-    transition-group.graphics-item-container(name="filter")
-    .img-grid(:style="responsiveColumns")
-      .item(v-for="(item, index) in sortedData"
-      :style="{height: itemHeight}"
-      :key="item.date"
-      @click="openModal(item)")
-        img.item-img(tabindex=-1 :style="{objectPosition: item.position}" :src="require(`/static/images/${item.filename}${item.raw_ext}`)")
+    .tag(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : inactiveClass]") {{displayTagList[index]}}
+  .perspective-set
+    .img-grid-wrapper(:style="{transform: deg}")
+      transition-group.graphics-item-container(name="filter")
+      .img-grid(:style="responsiveColumns")
+        .item(v-for="(item, index) in sortedData"
+        :style="{height: itemHeight}"
+        :key="item.date"
+        @click="openModal(item)")
+          img.item-img(tabindex=-1 :style="{objectPosition: item.position}" :src="require(`/static/images/${item.filename}${item.raw_ext}`)")
   .po(@click="changeDeg()")
+  .poyo
   .modal-wrapper(:style="{display: isModalVisible}")
     .modal-bg(@click="closeModal()")
-    .modal-content
-      img(:src="require(`/static/images/${selectedImageUrl}${selectedImageExt}`)")
+    .modal-content(:class="activeModal")
+      .yt-container(v-if="selectedImageLinks != ''")
+        youtube(ref="youtube" :video-id="selectedImageLinks")
+      img(v-else :src="require(`/static/images/${selectedImageUrl}${selectedImageExt}`)")
+      .text-box {{ selectedDescription }}
 </template>
 
 <script>
@@ -27,21 +32,24 @@ export default {
     return {
       width: 0,
       worksData,
-      tagList: ["ドット絵", "動画編集", "webアプリ"],
-      displayTagList: ["ドット絵", "動画編集", "webアプリ"],
+      tagList: ["ドット絵", "プログラミング", "MV", "依頼制作"],
+      displayTagList: ["ドット絵", "プログラミング", "MV", "依頼制作"],
       activeTagFlags: [false, false, false],
       activeTagIndex: -1,
       oldActiveTagIndex: 0,
-      activeClass: "graphics-tags-item-active",
-      inactiveClass: "graphics-tags-item",
+      activeClass: "works-tags-item-active",
+      inactiveClass: "works-tags-item",
       isShow: false,
       showIndex: 0,
       show: true,
       deg: "rotate3d(0, 1, 0, 0deg)",
       isChangedDeg: "none",
+      selectedImageLinks: "",
       selectedImageUrl: "steria_town",
       selectedImageExt: ".gif",
-      isModalVisible: false
+      selectedDescription: "",
+      isModalVisible: "none",
+      activeModal: ""
     }
   },
   created() {
@@ -67,7 +75,7 @@ export default {
     },
     changeDeg() {
       if(!this.isChangedDeg) {
-        this.deg = "rotate3d(0, 1, 0, 10deg)";
+        this.deg = "rotate3d(0, 1, 0, 8deg)";
         this.isChangedDeg = true;
       } else {
         this.deg = "rotate3d(0, 1, 0, 0deg)";
@@ -75,13 +83,22 @@ export default {
       }
     },
     openModal(item) {
-      this.isModalVisible = "block";
+      this.selectedImageLinks = item.links;
       this.selectedImageUrl = item.filename;
       this.selectedImageExt = item.raw_ext;
+      this.selectedDescription = item.desc;
+      this.isModalVisible = "block";
+      this.activeModal = "modal-active"
     },
     closeModal() {
       this.isModalVisible = "none";
-    }
+      this.activeModal = "";
+      if(this.selectedImageLinks != ""){
+        this.player.stopVideo();
+        this.selectedImageLinks != ""
+      }
+    },
+
   },
   computed: {
     filteredData() {
@@ -135,6 +152,9 @@ export default {
           "height": "49.5vw"
         }
       }
+    },
+    player() {
+      return this.$refs.youtube.player
     }
   },
   destroyed() {
@@ -146,17 +166,62 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "/assets/sass/app";
+
 .works-container {
-  perspective: 1000px;
   overflow: hidden;
   width: 100vw;
-  height: 90vh;
+  height: 93vh;
   image-rendering: pixelated;
+}
+
+.works-tags {
+  position: absolute;
+  top: 10vh;
+  right: 2vw;
+  width: 10vw;
+  height: 20vh;
+  display: grid;
+  user-select: none;
+
+  .works-tags-item {
+    cursor: pointer;
+
+    &:hover {
+      animation: fadeIn 0.3s ease;
+      background-color: $sub-color;
+    }
+  }
+}
+
+.works-tags-item-active {
+  cursor: pointer;
+  background-color: $theme-color;
+  color: #fff;
+
+  &:hover {
+    background-color: $theme-color;
+  }
+}
+
+@include smartphone {
+  .works-tags {
+    bottom: 7vh;
+    left: 0;
+    width: 100vw;
+    height: 5vh;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.perspective-set {
+  perspective: 1000px;
 }
 
 .img-grid-wrapper {
   position: absolute;
-  left: 10vw;
+  top: 5vh;
+  left: 5vw;
   display: inline-block;
   vertical-align: top;
   width: 80vw;
@@ -175,6 +240,7 @@ export default {
 
 .img-grid {
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 1vw;
   row-gap: 2vw;
@@ -202,6 +268,20 @@ export default {
   right: 0;
 }
 
+.poyo {
+  width: 20vw;
+  height: 20vw;
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+  background-image: url("/works_1.png");
+  background-size: cover;
+}
+
+.modal-active {
+  animation: modal 0.2s ease;
+}
+
 .modal-wrapper {
   position: absolute;
   top: 0;
@@ -209,6 +289,7 @@ export default {
   width: 100vw;
   height: 100vh;
   display: none;
+  user-select: none;
 
   .modal-bg {
     position: absolute;
@@ -222,17 +303,52 @@ export default {
 
   .modal-content {
     position: absolute;
-    left: 15vw;
-    width: 70vw;
+    left: 25vw;
+    width: 50vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-flow: column;
+
+    .yt-container {
+      iframe {
+        width: 2vw;
+        height: 28vw;
+      }
+    }
 
     img {
       width: 100%;
       height: auto;
     }
+
+    .text-box {
+      width: 100%;
+      color: #eee;
+    }
+  }
+}
+
+@keyframes modal {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    background-color: $sub-color;
   }
 }
 </style>
