@@ -33,8 +33,7 @@ a {
   width: 100%;
   height: 7dvh;
   top: 0;
-
-  // background-color: #000;
+  background-color: $bg-color;
   display: grid;
   grid-template-columns: 1fr 9fr 1fr 1fr 1fr;
   text-align: center;
@@ -64,7 +63,7 @@ a {
   width: 100%;
   height: 6dvh;
   bottom: 0;
-  background-color: #fff;
+  background-color: $bg-color;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;

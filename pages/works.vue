@@ -4,7 +4,7 @@
   .works-tags
     .tag(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : inactiveClass]") {{displayTagList[index]}}
   .perspective-set
-    .img-grid-wrapper(:style="{transform: deg}")
+    .img-grid-wrapper
       transition-group.graphics-item-container(name="filter")
       .img-grid(:style="responsiveColumns")
         .item(v-for="(item, index) in sortedData"
@@ -12,13 +12,11 @@
         :key="item.date"
         @click="openModal(item)")
           img.item-img(tabindex=-1 :style="{objectPosition: item.position}" :src="require(`/static/images/${item.filename}${item.raw_ext}`)")
-  .po(@click="changeDeg()")
-  .poyo
   .modal-wrapper(:style="{display: isModalVisible}")
     .modal-bg(@click="closeModal()")
     .modal-content(:class="activeModal")
       .yt-container(v-if="selectedImageLinks != ''")
-        youtube(ref="youtube" :video-id="selectedImageLinks")
+        youtube(class="iframe" ref="youtube" :video-id="selectedImageLinks")
       img(v-else :src="require(`/static/images/${selectedImageUrl}${selectedImageExt}`)")
       .text-box {{ selectedDescription }}
 </template>
@@ -42,8 +40,6 @@ export default {
       isShow: false,
       showIndex: 0,
       show: true,
-      deg: "rotate3d(0, 1, 0, 0deg)",
-      isChangedDeg: "none",
       selectedImageLinks: "",
       selectedImageUrl: "steria_town",
       selectedImageExt: ".gif",
@@ -71,15 +67,6 @@ export default {
         this.activeTagIndex = index;
         this.activeTagFlags.fill(false);
         this.activeTagFlags[index] = true;
-      }
-    },
-    changeDeg() {
-      if(!this.isChangedDeg) {
-        this.deg = "rotate3d(0, 1, 0, 8deg)";
-        this.isChangedDeg = true;
-      } else {
-        this.deg = "rotate3d(0, 1, 0, 0deg)";
-        this.isChangedDeg = false;
       }
     },
     openModal(item) {
@@ -169,6 +156,8 @@ export default {
 @import "/assets/sass/app";
 
 .works-container {
+  @extend %grid;
+
   overflow: hidden;
   width: 100vw;
   height: 93vh;
@@ -312,9 +301,10 @@ export default {
     flex-flow: column;
 
     .yt-container {
-      iframe {
-        width: 2vw;
-        height: 28vw;
+      width: 100%;
+
+      .iframe {
+        width: 100%;
       }
     }
 

@@ -1,7 +1,6 @@
 @import "variables";
 
 body {
-  background-color: $bg-color;
   margin: 0;
   font-family: fot-rodin-pron, sans-serif;
   font-weight: 600;
@@ -17,6 +16,25 @@ html.wf-active {
   visibility: visible;
 }
 
+%grid {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      $grid-color,
+      $grid-color 1px,
+      transparent 1px,
+      transparent 2vw
+    ),
+    repeating-linear-gradient(
+      0deg,
+      $grid-color,
+      $grid-color 1px,
+      $bg-color 1px,
+      $bg-color 2vw
+    );
+  background-size: 4vw;
+}
+
 $smartphone-breakpoint: 767px;
 
 @mixin smartphone {
@@ -28,5 +46,17 @@ $smartphone-breakpoint: 767px;
 @mixin pc {
   @media screen and (min-width: $smartphone-breakpoint + 1) {
     @content;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 0, 0);
+    opacity: 1;
   }
 }

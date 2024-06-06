@@ -1,20 +1,14 @@
 <template lang="pug">
 .container
-  .item
-    .door.left
-    .door.right
+  .item.a
     img(src="images/about/atmos_1.png")
 
-  .text-container
+  .text-container.b
     .head 世界観の作り込みは丁寧に
     .main ただキャラクターや背景のデザインに力を入れるだけでなく、文化などまで掘り下げて説得力のある世界観を作ります。
-  .item
-    .door.left
-    .door.right
+  .item.c
     img(src="images/about/atmos_2.png")
-  .item
-    .door.left
-    .door.right
+  .item.d
     img(src="images/about/atmos_3.png")
 
 </template>
@@ -41,9 +35,13 @@
   height: 100%;
   transition: all 0.2s;
   display: grid;
+  grid-template-areas:
+    "a b"
+    "c d";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 5%;
+  animation: rotate 0.4s cubic-bezier(0, 0.78, 0.46, 0.99);
 }
 
 .item {
@@ -51,26 +49,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-
-  .door {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    z-index: 10000;
-    background-color: #f6f6f6;
-  }
-
-  .left {
-    left: 0;
-    animation: leftSlide 0.3s cubic-bezier(0, 0.24, 0.16, 0.99);
-    transform: translateX(-100%);
-  }
-
-  .right {
-    right: 0;
-    animation: rightSlide 0.3s cubic-bezier(0, 0.24, 0.16, 0.99);
-    transform: translateX(100%);
-  }
+  animation: inset 0.4s cubic-bezier(0, 0.78, 0.46, 0.99);
 }
 
 .text-container {
@@ -80,39 +59,74 @@
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-  padding: 10%;
+  padding: 7%;
+  overflow: hidden;
   text-align: center;
-  border: 1px solid #333;
+  border: 1px solid $deep-grid-color;
+  background-color: $bg-color;
 
   .head {
-    font-size: 2.5em;
+    font-size: 2.2vw;
     width: 100%;
   }
 
   .main {
-    font-size: 1.15em;
+    font-size: 1.03vw;
     width: 100%;
     margin-top: 5%;
   }
 }
 
-@keyframes leftSlide {
-  0% {
-    transform: translateX(0);
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+
+.d {
+  grid-area: d;
+}
+
+@include smartphone {
+  .container {
+    grid-template-areas:
+      "b"
+      "a"
+      "c"
+      "d";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1%;
   }
 
-  100% {
-    transform: translateX(-100%);
+  .text-container {
+    .head {
+      font-size: 4vw;
+    }
+
+    .main {
+      font-size: 3.1vw;
+    }
   }
 }
 
-@keyframes rightSlide {
+@keyframes inset {
   0% {
-    transform: translateX(0);
+    transform: translateX(-150px);
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(100%);
+    transform: translateX(0);
+    clip-path: inset(0);
+    opacity: 1;
   }
 }
 
