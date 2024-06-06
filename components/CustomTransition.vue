@@ -51,7 +51,7 @@ $duration-division: 80;
   }
 
   .pixel {
-    height: calc(100 / 16) vw;
+    height: calc(100vw / 7);
   }
 
   @for $i from 0 through 143 {
@@ -69,7 +69,7 @@ $duration-division: 80;
   }
 
   .pixel {
-    height: calc(100 / 9) vw;
+    height: calc(100vw / 16);
   }
 
   @for $i from 0 through 143 {

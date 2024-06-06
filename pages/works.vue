@@ -16,7 +16,7 @@
     .modal-bg(@click="closeModal()")
     .modal-content(:class="activeModal")
       .yt-container(v-if="selectedImageLinks != ''")
-        youtube(class="iframe" ref="youtube" :video-id="selectedImageLinks")
+        youtube(class="iframe" ref="youtube" :width="iframeWidth" :height="iframeHeight" :video-id="selectedImageLinks")
       img(v-else :src="require(`/static/images/${selectedImageUrl}${selectedImageExt}`)")
       .text-box {{ selectedDescription }}
 </template>
@@ -45,7 +45,9 @@ export default {
       selectedImageExt: ".gif",
       selectedDescription: "",
       isModalVisible: "none",
-      activeModal: ""
+      activeModal: "",
+      iframeWidth: 640,
+      iframeHeight: 260
     }
   },
   created() {
@@ -57,6 +59,8 @@ export default {
   methods: {
     handleResize() {
       this.width = window.innerWidth
+      this.iframeWidth = this.width / 2;
+      this.iframeHeight = this.iframeWidth * 9 / 16;
     },
     enableTag(index) {
       this.oldActiveTagIndex = this.activeTagIndex;
@@ -301,10 +305,15 @@ export default {
     flex-flow: column;
 
     .yt-container {
+      position: relative;
       width: 100%;
+      height: calc(50vw / 16 * 9);
 
       .iframe {
+        position: absolute;
+        top: 40%;
         width: 100%;
+        height: 100%;
       }
     }
 
