@@ -12,14 +12,15 @@
         .name しろねぎ
       .c
         .text-container 主に非日常な世界観やループアニメーション、ゲーム画面のような絵を好んで制作している。 <br> ドット絵のMVや配信用の動画素材、イラストなど幅広く仕事を募集している。 <br> 音楽やゲームの制作にも興味を持っている。
+          .backline
       .d
         .banner-container
           a.banner.x(href="https://x.com/wh_negi" target="_blank")
-            img(src="/logo-x.png")
+            img(src="/images/about/logo-x.png")
           a.banner.twitch(href="https://www.twitch.tv/wh_negi" target="_blank")
-            img(src="/logo-twitch.png")
+            img(src="/images/about/logo-twitch.png")
           a.banner.booth(href="https://winnie.booth.pm/" target="_blank")
-            img(src="/logo-booth.png")
+            img(src="/images/about/logo-booth.png")
 </template>
 
 
@@ -41,8 +42,8 @@
 @import "~/assets/sass/app";
 
 .container {
-  width: 89%;
-  height: 90%;
+  width: calc(72vw * 0.89);
+  height: calc(40vw * 0.9);
   position: absolute;
   margin: 0;
   left: 5.5%;
@@ -168,10 +169,9 @@
     left: 5%;
     font-size: 1.3vw;
 
-    &::before {
-      content: "";
+    .backline {
       position: absolute;
-      margin-top: 1.3vw;
+      top: 1.3vw;
       width: 100%;
       height: 80%;
       background-image:
@@ -251,7 +251,50 @@
 
 @include smartphone {
   .container {
-    height: 40dvh;
+    width: 72vw;
+    height: 50vw;
+    left: 0;
+  }
+
+  .id-card {
+    width: 95%;
+    height: 95%;
+    left: 2.5%;
+    top: 2.5%;
+  }
+
+  .b {
+    .occupation {
+      font-size: 2vw;
+    }
+  }
+
+  .c {
+    .text-container {
+      font-size: 2.2vw;
+
+      .backline {
+        position: absolute;
+        top: 0.9vw;
+        width: 100%;
+        height: 80%;
+        background-image:
+          repeating-linear-gradient(
+            0deg,
+            $grid-color,
+            $grid-color 1px,
+            transparent 1px,
+            transparent 3.3vw
+          );
+      }
+    }
+  }
+
+  .d {
+    .banner {
+      width: 5vw;
+      height: 5vw;
+    }
   }
 }
 

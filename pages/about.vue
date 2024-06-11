@@ -152,7 +152,8 @@ export default Vue.extend({
     }
 
     &:nth-child(20) {
-      background-color: #aaa;
+      background-image: url("/chara.png");
+      background-position: 50% 50%;
       cursor: pointer;
       transition: all 0.1s ease-out;
       border: 1px solid $deep-grid-color;
@@ -264,7 +265,8 @@ export default Vue.extend({
 
 @include smartphone {
   .about-container {
-    overflow: scroll;
+    background-image: none;
+    background-color: $bg-color;
   }
 
   .pixel-container {
@@ -281,12 +283,16 @@ export default Vue.extend({
 
   .about-property {
     position: relative;
-    height: 80dvh;
+    height: 80vh;
     margin-top: 3dvh;
     margin-bottom: 6dvh;
     transform: translate(0, 0);
     top: auto;
     left: auto;
+  }
+
+  .profile-container {
+    height: 50vw;
   }
 }
 

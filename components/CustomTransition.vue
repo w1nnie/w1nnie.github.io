@@ -69,7 +69,8 @@ $duration-division: 80;
   }
 
   .pixel {
-    height: calc(100vw / 16);
+    height: 13vh;
+    border: 1px solid #eee;
   }
 
   @for $i from 0 through 143 {

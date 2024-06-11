@@ -3,22 +3,22 @@
   CustomTransition
   .works-tags
     .tag(v-for="(tag, index) in tagList" @click="enableTag(index)" :class="[activeTagFlags[index] ? activeClass : inactiveClass]") {{displayTagList[index]}}
-  .perspective-set
-    .img-grid-wrapper
-      transition-group.graphics-item-container(name="filter")
-      .img-grid(:style="responsiveColumns")
-        .item(v-for="(item, index) in sortedData"
-        :style="{height: itemHeight}"
-        :key="item.date"
-        @click="openModal(item)")
-          img.item-img(tabindex=-1 :style="{objectPosition: item.position}" :src="require(`/static/images/${item.filename}${item.raw_ext}`)")
+  .img-grid-wrapper
+    transition-group.graphics-item-container(name="filter")
+    .img-grid(:style="responsiveColumns")
+      .item(v-for="(item, index) in sortedData"
+      :style="{height: itemHeight}"
+      :key="item.date"
+      @click="openModal(item)")
+        img.item-img(tabindex=-1 :style="{objectPosition: item.position}" :src="require(`/static/images/gallery/${item.filename}${item.raw_ext}`)")
   .modal-wrapper(:style="{display: isModalVisible}")
     .modal-bg(@click="closeModal()")
     .modal-content(:class="activeModal")
       .yt-container(v-if="selectedImageLinks != ''")
         youtube(class="iframe" ref="youtube" :width="iframeWidth" :height="iframeHeight" :video-id="selectedImageLinks")
-      img(v-else :src="require(`/static/images/${selectedImageUrl}${selectedImageExt}`)")
+      img(v-else :src="require(`/static/images/gallery/${selectedImageUrl}${selectedImageExt}`)")
       .text-box {{ selectedDescription }}
+
 </template>
 
 <script>
@@ -47,7 +47,7 @@ export default {
       isModalVisible: "none",
       activeModal: "",
       iframeWidth: 640,
-      iframeHeight: 260
+      iframeHeight: 360
     }
   },
   created() {
@@ -85,8 +85,9 @@ export default {
       this.isModalVisible = "none";
       this.activeModal = "";
       if(this.selectedImageLinks != ""){
-        this.player.stopVideo();
-        this.selectedImageLinks != ""
+        console.log(this.player);
+        this.player.pauseVideo();
+        this.selectedImageLinks = "";
       }
     },
 
@@ -166,65 +167,92 @@ export default {
   width: 100vw;
   height: 93vh;
   image-rendering: pixelated;
+  position: relative;
 }
 
 .works-tags {
   position: absolute;
   top: 10vh;
-  right: 2vw;
+  right: 5vw;
   width: 10vw;
-  height: 20vh;
+  height: 30vh;
   display: grid;
   user-select: none;
+  font-size: 1vw;
+  text-align: right;
+  line-height: 1vw;
+  filter: drop-shadow(2px 2px 0 $deep-grid-color) drop-shadow(-0.1px -0.1px 0 $deep-grid-color);
 
   .works-tags-item {
+    position: relative;
     cursor: pointer;
+    background-color: $bg-color;
+    line-height: 5vh;
+    height: 5vh;
+    padding-right: 0.6vw;
+    clip-path: polygon(0 20%, 10% 0, 100% 0, 100% 100%, 10% 100%, 0 80%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid $deep-grid-color;
+      border-radius: 100%;
+      width: 1vh;
+      height: 1vh;
+      background-color: #fff;
+      top: 2vh;
+      left: 10%;
+    }
 
     &:hover {
       animation: fadeIn 0.3s ease;
       background-color: $sub-color;
+      color: #fff;
+    }
+  }
+
+  .works-tags-item-active {
+    cursor: pointer;
+    position: relative;
+    background-color: $theme-color;
+    color: #fff;
+    line-height: 5vh;
+    height: 5vh;
+    padding-right: 0.6vw;
+    clip-path: polygon(0 20%, 10% 0, 100% 0, 100% 100%, 10% 100%, 0 80%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid $deep-grid-color;
+      border-radius: 100%;
+      width: 1vh;
+      height: 1vh;
+      background-color: #fff;
+      top: 2vh;
+      left: 10%;
+    }
+
+    &:hover {
+      background-color: $theme-color;
     }
   }
 }
 
-.works-tags-item-active {
-  cursor: pointer;
-  background-color: $theme-color;
-  color: #fff;
-
-  &:hover {
-    background-color: $theme-color;
-  }
-}
-
-@include smartphone {
-  .works-tags {
-    bottom: 7vh;
-    left: 0;
-    width: 100vw;
-    height: 5vh;
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-.perspective-set {
-  perspective: 1000px;
-}
-
 .img-grid-wrapper {
   position: absolute;
-  top: 5vh;
-  left: 5vw;
+  top: 0;
+  left: 4vw;
   display: inline-block;
   vertical-align: top;
   width: 80vw;
-  height: 80vh;
+  height: 93vh;
   overflow-x: visible;
   overflow-y: scroll;
   transform: rotate3d(0, 1, 0, 0deg);
-
-  // background-color: blue;
+  z-index: 1;
   transition: transform 0.3s ease-in-out;
+  user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -245,30 +273,15 @@ export default {
   height: auto;
   object-fit: cover;
   cursor: pointer;
+  border: 1px solid $deep-grid-color;
+  box-shadow: 2px 2px $deep-grid-color;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
 
   &:hover {
     transform: scale(1.1);
     transition: transform 0.1s ease-out;
   }
-}
-
-.po {
-  width: 30px;
-  height: 30px;
-  background-color: green;
-  position: fixed;
-  top: calc(80vh - 30px);
-  right: 0;
-}
-
-.poyo {
-  width: 20vw;
-  height: 20vw;
-  position: fixed;
-  right: 10%;
-  bottom: 10%;
-  background-image: url("/works_1.png");
-  background-size: cover;
 }
 
 .modal-active {
@@ -283,6 +296,7 @@ export default {
   height: 100vh;
   display: none;
   user-select: none;
+  z-index: 5;
 
   .modal-bg {
     position: absolute;
@@ -326,6 +340,51 @@ export default {
       width: 100%;
       color: #eee;
     }
+  }
+}
+
+@include smartphone {
+  .works-container {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        $grid-color,
+        $grid-color 1px,
+        transparent 1px,
+        transparent 8vw
+      ),
+      repeating-linear-gradient(
+        0deg,
+        $grid-color,
+        $grid-color 1px,
+        $bg-color 1px,
+        $bg-color 8vw
+      );
+    background-size: 8vw;
+  }
+
+  .works-tags {
+    bottom: 7vh;
+    left: 0;
+    width: 100vw;
+    height: 5vh;
+    grid-template-columns: repeat(5, 1fr);
+    display: none;
+  }
+
+  .img-grid-wrapper {
+    width: 100vw;
+    left: 0;
+    top: 0;
+
+    .img-grid {
+      column-gap: 3vw;
+    }
+  }
+
+  .modal-content {
+    width: 100vw;
+    left: 0;
   }
 }
 

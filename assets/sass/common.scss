@@ -35,6 +35,25 @@ html.wf-active {
   background-size: 4vw;
 }
 
+%grid-sp {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      $grid-color,
+      $grid-color 1px,
+      transparent 1px,
+      transparent 4vw
+    ),
+    repeating-linear-gradient(
+      0deg,
+      $grid-color,
+      $grid-color 1px,
+      $bg-color 1px,
+      $bg-color 4vw
+    );
+  background-size: 8vw;
+}
+
 $smartphone-breakpoint: 767px;
 
 @mixin smartphone {

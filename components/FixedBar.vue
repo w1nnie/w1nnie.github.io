@@ -30,6 +30,7 @@ a {
 
 .header-pc {
   position: sticky;
+  z-index: 10000;
   width: 100%;
   height: 7dvh;
   top: 0;

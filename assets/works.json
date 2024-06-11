@@ -69,20 +69,7 @@
         "ドット絵"
     ]
   },
-  {
-    "filename": "ARpostcard",
-    "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "ARポストカード",
-    "desc": "かざすとARで絵が動き出すポストカード",
-    "date": 20231021,
-    "position": "75% 50%",
-    "links": "",
-    "linkText": "",
-    "tags": [
-        "プログラミング"
-    ]
-  },
+
   {
     "filename": "collection",
     "raw_ext": ".gif",
@@ -140,11 +127,165 @@
     ]
   },
   {
-    "filename": "steria_room",
-    "raw_ext": ".gif",
+    "filename": "keyvisual",
+    "raw_ext": ".png",
+    "thm_ext": ".png",
+    "title": "リオニア島漂流記　仮キービジュアル",
+    "desc": "po",
+    "date": 20240129,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "steria_big",
+    "raw_ext": ".png",
+    "thm_ext": ".png",
+    "title": "デカドット",
+    "desc": "po",
+    "date": 20231106,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "steria_station",
+    "raw_ext": ".png",
     "thm_ext": ".png",
     "title": "absorbed in",
     "desc": "po",
+    "date": 20230626,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "steria_cafe",
+    "raw_ext": ".png",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "po",
+    "date": 20230911,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "cafe_interior",
+    "raw_ext": ".png",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20231031,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "town_snow",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20231024,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "steria_forest",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20230503,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "alphine_seashore",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20240515,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "tunnel",
+    "raw_ext": ".png",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20221031,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "vil-in-cave",
+    "raw_ext": ".png",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20220930,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "amayoru",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20231126,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "amyalib",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
     "date": 20211028,
     "position": "50% 50%",
     "links": "",
@@ -154,110 +295,81 @@
     ]
   },
   {
-    "filename": "steria_room",
+    "filename": "ARpostcard",
     "raw_ext": ".gif",
     "thm_ext": ".png",
-    "title": "absorbed in",
-    "desc": "po",
-    "date": 20211029,
+    "title": "",
+    "desc": "",
+    "date": 20231104,
     "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
-        "ドット絵"
+        "プログラミング"
+    ]
+  },
+  {
+    "filename": "color_circle_picker",
+    "raw_ext": ".png",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20220522,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "プログラミング"
+    ]
+  },
+  {
+    "filename": "portfolio_1",
+    "raw_ext": ".png",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20210830,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "プログラミング"
+    ]
+  },
+  {
+    "filename": "portfolio_2",
+    "raw_ext": ".png",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20240620,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "プログラミング"
     ]
   },
   {
     "filename": "steria_room",
     "raw_ext": ".gif",
     "thm_ext": ".png",
-    "title": "absorbed in",
-    "desc": "po",
-    "date": 20211030,
-    "position": "50% 50%",
-    "links": "",
-    "linkText": "",
-    "tags": [
-        "ドット絵"
-    ]
-  },
-  {
-    "filename": "steria_room",
-    "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "absorbed in",
-    "desc": "po",
-    "date": 20211031,
-    "position": "50% 50%",
-    "links": "",
-    "linkText": "",
-    "tags": [
-        "ドット絵"
-    ]
-  },
-  {
-    "filename": "steria_room",
-    "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "absorbed in",
-    "desc": "po",
-    "date": 20211032,
-    "position": "50% 50%",
-    "links": "",
-    "linkText": "",
-    "tags": [
-        "ドット絵"
-    ]
-  },
-  {
-    "filename": "steria_room",
-    "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "absorbed in",
-    "desc": "po",
-    "date": 20211033,
-    "position": "50% 50%",
-    "links": "",
-    "linkText": "",
-    "tags": [
-        "ドット絵"
-    ]
-  },
-  {
-    "filename": "steria_room",
-    "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "absorbed in",
-    "desc": "po",
-    "date": 20211034,
-    "position": "50% 50%",
-    "links": "",
-    "linkText": "",
-    "tags": [
-        "ドット絵"
-    ]
-  },
-  {
-    "filename": "steria_room",
-    "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "absorbed in",
-    "desc": "po",
-    "date": 20211035,
-    "position": "50% 50%",
-    "links": "",
-    "linkText": "",
-    "tags": [
-        "ドット絵"
-    ]
-  },
-  {
-    "filename": "steria_room",
-    "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "absorbed in",
-    "desc": "po",
+    "title": "",
+    "desc": "",
     "date": 20211036,
+    "position": "50% 50%",
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },  {
+    "filename": "steria_room",
+    "raw_ext": ".gif",
+    "thm_ext": ".png",
+    "title": "",
+    "desc": "",
+    "date": 20211037,
     "position": "50% 50%",
     "links": "",
     "linkText": "",
