@@ -2,13 +2,12 @@
   {
     "filename": "amamya_ending",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "配信エンディング",
-    "desc": "にじさんじ所属ライバー「天宮こころ」様の配信エンディング動画を制作させていただきました。",
+    "desc": "にじさんじ所属ライバー 天宮こころ様の配信エンディング動画を制作させていただきました。",
     "date": 20221202,
-    "position": "60% 30%",
     "links": "",
-    "linkText": "",
+    "linkText": "https://www.youtube.com/watch?v=SiffZgVJbWw&t=7481s",
     "tags": [
         "ドット絵", "依頼制作", "配信素材"
     ]
@@ -16,11 +15,10 @@
   {
     "filename": "steria_room",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "absorbed in",
-    "desc": "恍惚と一輪の藤の花を見つめる",
+    "rawWidth": 400,
+    "title": "",
+    "desc": "",
     "date": 20211027,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -30,11 +28,10 @@
   {
     "filename": "steria_town",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "視点変換",
-    "desc": "クォータービューから透視投影へ",
+    "rawWidth": 400,
+    "title": "",
+    "desc": "",
     "date": 20220213,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -44,11 +41,10 @@
   {
     "filename": "paging",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "a green witch",
-    "desc": "po",
+    "rawWidth": 480,
+    "title": "",
+    "desc": "",
     "date": 20221117,
-    "position": "75% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -58,11 +54,10 @@
   {
     "filename": "yurayura",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "日常",
-    "desc": "ゆらゆら",
+    "rawWidth": 320,
+    "title": "",
+    "desc": "",
     "date": 20230211,
-    "position": "75% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -73,11 +68,10 @@
   {
     "filename": "collection",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "Collections",
     "desc": "廻世るり様の「Collections」のMVを制作させていただきました。",
     "date": 20230722,
-    "position": "75% 50%",
     "links": "5pJb8u2EJZk",
     "linkText": "",
     "tags": [
@@ -87,13 +81,12 @@
   {
     "filename": "emotionalizer",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "エモーショナライザー",
-    "desc": "po",
+    "desc": "初音ミクに感情を宿すwebアプリ。マジカルミライ10thプロコンにて優秀賞を頂きました。",
     "date": 20220902,
-    "position": "75% 50%",
     "links": "grd5_wgrM14",
-    "linkText": "",
+    "linkText": "https://magicalmirai.com/10th/procon/result.html",
     "tags": [
         "webアプリ", "プログラミング"
     ]
@@ -101,13 +94,12 @@
   {
     "filename": "yorinuki",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "よりぬきあまみゃちゃん",
-    "desc": "po",
+    "desc": "にじさんじ所属ライバー 天宮こころ様の切り抜き動画を制作させていただきました。",
     "date": 20220711,
-    "position": "75% 50%",
     "links": "5jCu10bP7Ng",
-    "linkText": "",
+    "linkText": "https://www.youtube.com/playlist?list=PLPockELP1a45P9CSar3AcJkWurxJYpimF",
     "tags": [
         "動画編集", "依頼制作"
     ]
@@ -115,11 +107,10 @@
   {
     "filename": "sunset_memory",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "sunset memory",
-    "desc": "po",
+    "desc": "輝マレカ様の「sunset memory」のMVを制作させていただきました。",
     "date": 20240215,
-    "position": "50% 50%",
     "links": "XK9wUNUBvsI",
     "linkText": "",
     "tags": [
@@ -129,11 +120,10 @@
   {
     "filename": "keyvisual",
     "raw_ext": ".png",
-    "thm_ext": ".png",
-    "title": "リオニア島漂流記　仮キービジュアル",
-    "desc": "po",
+    "rawWidth": 0,
+    "title": "(仮)キービジュアル",
+    "desc": "制作中のゲームのキービジュアルのようなもの",
     "date": 20240129,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -143,11 +133,10 @@
   {
     "filename": "steria_big",
     "raw_ext": ".png",
-    "thm_ext": ".png",
-    "title": "デカドット",
-    "desc": "po",
+    "rawWidth": 0,
+    "title": "",
+    "desc": "",
     "date": 20231106,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -157,11 +146,10 @@
   {
     "filename": "steria_station",
     "raw_ext": ".png",
-    "thm_ext": ".png",
-    "title": "absorbed in",
-    "desc": "po",
+    "rawWidth": 0,
+    "title": "",
+    "desc": "",
     "date": 20230626,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -171,11 +159,10 @@
   {
     "filename": "steria_cafe",
     "raw_ext": ".png",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "",
-    "desc": "po",
+    "desc": "",
     "date": 20230911,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -185,11 +172,10 @@
   {
     "filename": "cafe_interior",
     "raw_ext": ".png",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "",
     "desc": "",
     "date": 20231031,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -199,11 +185,10 @@
   {
     "filename": "town_snow",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 320,
     "title": "",
     "desc": "",
     "date": 20231024,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -213,11 +198,10 @@
   {
     "filename": "steria_forest",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 320,
     "title": "",
     "desc": "",
     "date": 20230503,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -227,11 +211,10 @@
   {
     "filename": "alphine_seashore",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 384,
     "title": "",
     "desc": "",
     "date": 20240515,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -241,11 +224,10 @@
   {
     "filename": "tunnel",
     "raw_ext": ".png",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "",
     "desc": "",
     "date": 20221031,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -255,11 +237,10 @@
   {
     "filename": "vil-in-cave",
     "raw_ext": ".png",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "",
     "desc": "",
     "date": 20220930,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -269,11 +250,10 @@
   {
     "filename": "amayoru",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 384,
     "title": "",
     "desc": "",
     "date": 20231126,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -283,11 +263,10 @@
   {
     "filename": "amyalib",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 400,
     "title": "",
     "desc": "",
     "date": 20211028,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -297,11 +276,10 @@
   {
     "filename": "ARpostcard",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
-    "title": "",
-    "desc": "",
+    "rawWidth": 0,
+    "title": "ARポストカード",
+    "desc": "かざすとアニメーションが再生されるポストカード。",
     "date": 20231104,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -311,13 +289,12 @@
   {
     "filename": "color_circle_picker",
     "raw_ext": ".png",
-    "thm_ext": ".png",
-    "title": "",
-    "desc": "",
+    "rawWidth": 0,
+    "title": "Color Circle Picker",
+    "desc": "web上の色のカラーサークルの座標がわかるカラーピッカー。",
     "date": 20220522,
-    "position": "50% 50%",
     "links": "",
-    "linkText": "",
+    "linkText": "https://chromewebstore.google.com/detail/color-circle-picker/fpgkckbnmjfegnfeiciinfglblkdgdln",
     "tags": [
         "プログラミング"
     ]
@@ -325,11 +302,10 @@
   {
     "filename": "portfolio_1",
     "raw_ext": ".png",
-    "thm_ext": ".png",
-    "title": "",
-    "desc": "",
+    "rawWidth": 0,
+    "title": "ポートフォリオサイト ver.1",
+    "desc": "大学時代に作ったポートフォリオサイト。様々な視覚的表現を盛り込んだ。",
     "date": 20210830,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -339,11 +315,10 @@
   {
     "filename": "portfolio_2",
     "raw_ext": ".png",
-    "thm_ext": ".png",
-    "title": "",
-    "desc": "",
+    "rawWidth": 0,
+    "title": "ポートフォリオサイト ver.2",
+    "desc": "このポートフォリオサイト。シンプルで見やすいデザインを目指した。",
     "date": 20240620,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -353,11 +328,10 @@
   {
     "filename": "steria_room",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "",
     "desc": "",
     "date": 20211036,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [
@@ -366,11 +340,10 @@
   },  {
     "filename": "steria_room",
     "raw_ext": ".gif",
-    "thm_ext": ".png",
+    "rawWidth": 0,
     "title": "",
     "desc": "",
     "date": 20211037,
-    "position": "50% 50%",
     "links": "",
     "linkText": "",
     "tags": [

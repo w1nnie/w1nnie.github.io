@@ -13,11 +13,16 @@
         img.item-img(tabindex=-1 :style="{objectPosition: item.position}" :src="require(`/static/images/gallery/${item.filename}${item.raw_ext}`)")
   .modal-wrapper(:style="{display: isModalVisible}")
     .modal-bg(@click="closeModal()")
-    .modal-content(:class="activeModal")
+    .modal-content(:class="activeModal" :style="{width: modalWidth}")
       .yt-container(v-if="selectedImageLinks != ''")
         youtube(class="iframe" ref="youtube" :width="iframeWidth" :height="iframeHeight" :video-id="selectedImageLinks")
       img(v-else :src="require(`/static/images/gallery/${selectedImageUrl}${selectedImageExt}`)")
-      .text-box {{ selectedDescription }}
+      .text-box(:style="{display: textDisplay}")
+        .title-container
+          .title {{ selectedTitle }}
+          a.link-button(:style="{display: linkDisplay}" :href="linkText" target="_blank")
+            img(:src="require(`/static/link.png`)")
+        .description {{ selectedDescription }}
 
 </template>
 
@@ -44,10 +49,15 @@ export default {
       selectedImageUrl: "steria_town",
       selectedImageExt: ".gif",
       selectedDescription: "",
+      selectedTitle: "",
       isModalVisible: "none",
       activeModal: "",
+      modalWidth: "50vw",
       iframeWidth: 640,
-      iframeHeight: 360
+      iframeHeight: 360,
+      textDisplay: "block",
+      linkDisplay: "block",
+      linkText: ""
     }
   },
   created() {
@@ -59,8 +69,13 @@ export default {
   methods: {
     handleResize() {
       this.width = window.innerWidth
-      this.iframeWidth = this.width / 2;
+      if(this.width > 767){
+        this.iframeWidth = this.width / 2;
+      } else {
+        this.iframeWidth = this.width;
+      }
       this.iframeHeight = this.iframeWidth * 9 / 16;
+
     },
     enableTag(index) {
       this.oldActiveTagIndex = this.activeTagIndex;
@@ -77,9 +92,36 @@ export default {
       this.selectedImageLinks = item.links;
       this.selectedImageUrl = item.filename;
       this.selectedImageExt = item.raw_ext;
-      this.selectedDescription = item.desc;
+      this.selectedTitle = item.title;
+      this.selectedDescription = item.desc != "" ? "▶" + item.desc : "";
       this.isModalVisible = "block";
-      this.activeModal = "modal-active"
+      this.activeModal = "modal-active";
+      this.linkText = item.linkText;
+      if(item.linkText != "") {
+        this.linkDisplay = "block";
+      } else {
+        this.linkDisplay = "none";
+      }
+      if(item.title == "") {
+        this.textDisplay = "none";
+      } else {
+        this.textDisplay = "block";
+      }
+      if(this.width > 767){
+        if(item.rawWidth != 0) {
+          let w = item.rawWidth * Math.floor(this.width * 0.5 / item.rawWidth);
+          this.modalWidth = w + "px";
+        } else {
+          this.modalWidth = "50vw"
+        }
+      } else {
+        if(item.rawWidth != 0) {
+          let w = item.rawWidth * Math.floor(this.width / item.rawWidth);
+          this.modalWidth = w + "px";
+        } else {
+          this.modalWidth = "100vw"
+        }
+      }
     },
     closeModal() {
       this.isModalVisible = "none";
@@ -310,9 +352,13 @@ export default {
 
   .modal-content {
     position: absolute;
-    left: 25vw;
+    left: 0;
+    right: 0;
+    top: -10vh;
+    bottom: 0;
+    margin: auto;
     width: 50vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -338,7 +384,52 @@ export default {
 
     .text-box {
       width: 100%;
-      color: #eee;
+      color: #111;
+      height: 5vw;
+      display: flex;
+      flex-flow: column;
+      align-items: left;
+    }
+
+    .title-container {
+      width: 40%;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+
+      .title {
+        width: 80%;
+        font-size: 1.2vw;
+        margin: 5px;
+        padding: 2px;
+        background-color: $grid-color;
+        border: 1px solid $deep-grid-color;
+        box-shadow: 2px 2px $deep-grid-color;
+      }
+
+      .link-button {
+        height: 2.3vw;
+        width: 2.3vw;
+        margin: 5px;
+        padding: 2px;
+        background-color: $grid-color;
+        border: 1px solid $deep-grid-color;
+        box-shadow: 2px 2px $deep-grid-color;
+
+        &:hover {
+          background-color: rgb(170 230 160 / 100%);
+        }
+      }
+    }
+
+    .description {
+      font-size: 1vw;
+      margin: 5px;
+      padding: 2px;
+      padding-left: 5px;
+      background-color: $accent-color;
+      border: 1px solid $deep-grid-color;
+      box-shadow: 2px 2px $deep-grid-color;
     }
   }
 }
@@ -382,9 +473,36 @@ export default {
     }
   }
 
-  .modal-content {
-    width: 100vw;
-    left: 0;
+  .modal-wrapper {
+    .modal-content {
+      width: 100vw;
+      left: 0;
+
+      .yt-container {
+        height: calc(100vw / 16 * 9);
+      }
+
+      .title-container {
+        width: 90%;
+
+        .title {
+          width: 80%;
+          height: 8vw;
+          line-height: 6vw;
+          font-size: 4vw;
+        }
+
+        .link-button {
+          height: 8vw;
+          width: 8vw;
+        }
+      }
+
+      .description {
+        height: 12vw;
+        font-size: 3vw;
+      }
+    }
   }
 }
 
