@@ -1,4 +1,4 @@
-const PRODUCTION_BASE_PATH = '/Portfolio2023/docs/';
+const PRODUCTION_BASE_PATH = '/w1nnie.github.io';
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
