@@ -7,31 +7,31 @@
       p(v-if="index == 31") 世界観
       p(v-if="index == 33") アニメーション
       p(v-if="index == 35") 演出
-      .button(v-if="index == 20" @click="descend(),profile()")
-      .button(v-if="index == 22" @click="descend(),atmosphere()")
-      .button(v-if="index == 24" @click="descend(),animation()")
-      .button(v-if="index == 26" @click="descend(),direction()")
+      .button(v-if="index == 20" @click="descend(),profile()" style="background-image: url(chara.png); background-size:cover;")
+      .button(v-if="index == 22" @click="descend(),atmosphere()" style="background-image: url(images/about/steria_room-export.gif); background-size:cover;")
+      .button(v-if="index == 24" @click="descend(),animation()" style="background-image: url(images/about/forest_org-export.gif); background-size:cover;")
+      .button(v-if="index == 26" @click="descend(),direction()" style="background-image: url(images/about/steria_town-export.gif); background-size:cover;")
   .property(:style="{opacity: propertyOpacity}")
     .profile-container.about-property(:style="{display: profileDisplay}")
       Profile
-      .revbutton(@click="profile(),ascend()")
+      .revbutton(@click="profile(),ascend()" style="background-image:url(x.png); background-size:cover;")
     .atmosphere-container.about-property(:style="{display: atmosDisplay}")
       Atmosphere
-      .revbutton(@click="atmosphere(),ascend()")
+      .revbutton(@click="atmosphere(),ascend()" style="background-image:url(x.png); background-size:cover;")
     .animation-container.about-property(:style="{display: animationDisplay}")
       Animation
-      .revbutton(@click="animation(),ascend()")
+      .revbutton(@click="animation(),ascend()" style="background-image:url(x.png); background-size:cover;")
     .direction-container.about-property(:style="{display: directionDisplay}")
       Direction
-      .revbutton(@click="direction(),ascend()")
+      .revbutton(@click="direction(),ascend()" style="background-image:url(x.png); background-size:cover;")
   .deco
     .square1
     .square2
 </template>
 
 <script>
-import Vue from 'vue'
-import Atmosphere from '/components/atmosphere.vue'
+import Vue from 'vue';
+import Atmosphere from '/components/atmosphere.vue';
 
 export default Vue.extend({
   name: 'AboutPage',
@@ -44,7 +44,7 @@ export default Vue.extend({
       animationDisplay: "none",
       directionDisplay: "none",
       profileDisplay: "none",
-      propertyOpacity: 1
+      propertyOpacity: 1,
     }
   },
   mounted() {
@@ -152,8 +152,6 @@ export default Vue.extend({
     }
 
     &:nth-child(20) {
-      background-image: url("/chara.png");
-      background-position: 50% 50%;
       cursor: pointer;
       transition: all 0.1s ease-out;
       border: 1px solid $deep-grid-color;
@@ -165,7 +163,6 @@ export default Vue.extend({
 
     /* stylelint-disable-next-line no-descending-specificity */
     &:nth-child(22) {
-      background-image: url("/images/about/steria_room-export.gif");
       cursor: pointer;
       transition: all 0.1s ease-out;
       border: 1px solid $deep-grid-color;
@@ -177,7 +174,6 @@ export default Vue.extend({
 
     /* stylelint-disable-next-line no-descending-specificity */
     &:nth-child(24) {
-      background-image: url("/images/about/forest_org-export.gif");
       cursor: pointer;
       transition: all 0.1s ease-out;
       border: 1px solid $deep-grid-color;
@@ -189,7 +185,6 @@ export default Vue.extend({
 
     /* stylelint-disable-next-line no-descending-specificity */
     &:nth-child(26) {
-      background-image: url("/images/about/steria_town-export.gif");
       cursor: pointer;
       transition: all 0.1s ease-out;
       border: 1px solid $deep-grid-color;
@@ -233,8 +228,6 @@ export default Vue.extend({
   cursor: pointer;
   border: 1px solid #333;
   text-align: center;
-  background-image: url("/x.png");
-  background-size: cover;
   z-index: 1000;
 }
 

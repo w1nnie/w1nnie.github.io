@@ -11,25 +11,25 @@
         .item.anime.pc-only アニメーション<br>なし
         .item.price.a.small
           .sample
-            img(src="/images/contact/small_1.png")
-            img(src="/images/contact/small_2.png")
+            img(src="images/contact/small_1.png")
+            img(src="images/contact/small_2.png")
           .text 5000<span class="span">円</span>
         .item.price.b
           .sample
-            img(src="/images/contact/big_1.png")
-            img(src="/images/contact/big_2.png")
+            img(src="images/contact/big_1.png")
+            img(src="images/contact/big_2.png")
           .text 15000<span class="span">円</span>
         .item.anime.pc-only アニメーション<br>あり
         .item.price.c.small
           .sample
-            img(src="/images/contact/small_anime_1.gif")
-            img(src="/images/contact/small_anime_2.gif")
+            img(src="images/contact/small_anime_1.gif")
+            img(src="images/contact/small_anime_2.gif")
           .text 10000<span class="span">円~</span>
 
         .item.price.d
           .sample
-            img(src="/images/gallery/steria_forest.gif")
-            img(src="/images/gallery/steria_room.gif")
+            img(src="images/gallery/steria_forest.gif")
+            img(src="images/gallery/steria_room.gif")
           .text 30000<span class="span">円~</span>
         .item.size.sp-only.e 小サイズ<br>アニメなし
         .item.size.sp-only.f 小サイズ<br>アニメあり

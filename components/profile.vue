@@ -6,7 +6,7 @@
     .border-leftBottom
     .border-rightBottom
     .id-card
-      .icon.a
+      .icon.a(style="background-image:url(chara.png); background-size:cover; background-repeat:no-repeat; background-position:50% 50%;")
       .b
         .occupation Pixel Artist
         .name しろねぎ
@@ -16,11 +16,11 @@
       .d
         .banner-container
           a.banner.x(href="https://x.com/wh_negi" target="_blank")
-            img(src="/images/about/logo-x.png")
+            img(src="images/about/logo-x.png")
           a.banner.twitch(href="https://www.twitch.tv/wh_negi" target="_blank")
-            img(src="/images/about/logo-twitch.png")
+            img(src="images/about/logo-twitch.png")
           a.banner.booth(href="https://winnie.booth.pm/" target="_blank")
-            img(src="/images/about/logo-booth.png")
+            img(src="images/about/logo-booth.png")
 </template>
 
 
@@ -123,10 +123,10 @@
 }
 
 .a {
-  background-image: url("/chara.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  // background-image: url("/chara.png");
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // background-position: 50% 50%;
   grid-area: a;
   border: 1px solid $deep-grid-color;
 }
