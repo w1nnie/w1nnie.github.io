@@ -5,9 +5,10 @@ export default {
   target: 'static',
 
   router: {
-    base: process.env.NODE_ENV === 'production'
-      ? PRODUCTION_BASE_PATH
-      : '/'
+    // base: process.env.NODE_ENV === 'production'
+    //   ? PRODUCTION_BASE_PATH
+    //   : '/'
+    base: PRODUCTION_BASE_PATH
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
