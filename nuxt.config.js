@@ -1,4 +1,4 @@
-const PRODUCTION_BASE_PATH = '/';
+const PRODUCTION_BASE_PATH = '/Portforio2023/';
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
