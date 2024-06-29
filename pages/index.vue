@@ -19,6 +19,8 @@ export default Vue.extend({
 
 .index-container {
   background-color: #000;
+  width: 100%;
+  overflow: hidden;
 }
 
 .video-container {

@@ -283,7 +283,7 @@ export default Vue.extend({
 
   .about-property {
     position: relative;
-    height: 80vh;
+    height: 85vh;
     margin-top: 3dvh;
     margin-bottom: 6dvh;
     transform: translate(0, 0);
@@ -294,25 +294,9 @@ export default Vue.extend({
   .profile-container {
     height: 50vw;
   }
-}
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  30% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-
-  70% {
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+  .direction-container {
+    margin-bottom: 10vh;
   }
 }
 

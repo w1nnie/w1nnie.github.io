@@ -5,32 +5,36 @@
     .head.menu-head おしながき
     .menu
       .pixelart-container
-        .item.title
-        .item.size 小サイズ <br><span class = "subitemtext">アイコンなどに 長辺100px程度</span>
-        .item.size 大サイズ <br><span class = "subitemtext">一般的な一枚絵 長辺300px程度</span>
-        .item.anime アニメーション<br>なし
-        .item.price
+        .item.title.pc-only
+        .item.size.pc-only 小サイズ <br><span class = "subitemtext">アイコンなどに 長辺100px程度</span>
+        .item.size.pc-only 大サイズ <br><span class = "subitemtext">一般的な一枚絵 長辺300px程度</span>
+        .item.anime.pc-only アニメーション<br>なし
+        .item.price.a.small
           .sample
             img(src="/images/contact/small_1.png")
             img(src="/images/contact/small_2.png")
           .text 5000<span class="span">円</span>
-        .item.price
+        .item.price.b
           .sample
             img(src="/images/contact/big_1.png")
             img(src="/images/contact/big_2.png")
           .text 15000<span class="span">円</span>
-        .item.anime アニメーション<br>あり
-        .item.price
+        .item.anime.pc-only アニメーション<br>あり
+        .item.price.c.small
           .sample
             img(src="/images/contact/small_anime_1.gif")
             img(src="/images/contact/small_anime_2.gif")
           .text 10000<span class="span">円~</span>
 
-        .item.price
+        .item.price.d
           .sample
             img(src="/images/gallery/steria_forest.gif")
             img(src="/images/gallery/steria_room.gif")
           .text 30000<span class="span">円~</span>
+        .item.size.sp-only.e 小サイズ<br>アニメなし
+        .item.size.sp-only.f 小サイズ<br>アニメあり
+        .item.size.sp-only.g 大サイズ<br>アニメなし
+        .item.size.sp-only.h 大サイズ<br>アニメあり
       .caution デザインを考案する必要がある場合、表示金額とは別途のデザイン料をいただきます。<br>アニメーションについてはフレーム数の多さ(滑らかさ)によって上乗せする場合があります。<br>MVも制作可能です。カット数や演出及び報酬は要相談です。 <br>相談を経てお見積りしますので気軽にご連絡ください。
       .mv-container
     .head.flow-head 制作の流れ
@@ -160,6 +164,7 @@ export default Vue.extend({
         background: $grid-color;
         color: $deep-grid-color;
         border: 1px solid $deep-grid-color;
+        line-height: 0%;
       }
 
       .price {
@@ -171,14 +176,18 @@ export default Vue.extend({
           margin-left: 0.1vw;
         }
       }
+
+      .sp-only {
+        display: none;
+      }
     }
 
     .caution {
-      width: 60%;
+      width: 56%;
       display: inline-block;
       font-size: 1vw;
       color: $deep-grid-color;
-      margin-left: 20%;
+      margin-left: 22%;
       margin-top: 1vh;
       padding: 1vw;
       background: $bg-color;
@@ -272,6 +281,176 @@ export default Vue.extend({
     margin-bottom: 20vh;
     display: inline-block;
     text-align: center;
+  }
+}
+
+@include smartphone {
+  .contact-container {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        $grid-color,
+        $grid-color 1px,
+        transparent 1px,
+        transparent 8vw
+      ),
+      repeating-linear-gradient(
+        0deg,
+        $grid-color,
+        $grid-color 1px,
+        $bg-color 1px,
+        $bg-color 8vw
+      );
+    background-size: 8vw;
+  }
+
+  .head {
+    font-size: 6vw;
+    width: 50%;
+    margin: 1vh 0;
+  }
+
+  .second-head {
+    font-size: 4vw;
+  }
+
+  .contact-flex {
+    .menu {
+      .pixelart-container {
+        grid-template-areas:
+          "e a"
+          "f c"
+          "g b"
+          "h d";
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        .pc-only {
+          display: none;
+        }
+
+        .sp-only {
+          display: inline-block;
+          text-align: center;
+          line-height: 200%;
+          padding-top: 80%;
+          font-size: 3vw;
+        }
+
+        .item {
+          img {
+            height: 7.7vh;
+          }
+        }
+
+        .small {
+          img {
+            height: 10vh;
+          }
+        }
+
+        .price {
+          font-size: 5vw;
+
+          .span {
+            font-size: 3.5vw;
+          }
+        }
+      }
+
+      .a {
+        grid-area: a;
+      }
+
+      .b {
+        grid-area: b;
+      }
+
+      .c {
+        grid-area: c;
+      }
+
+      .d {
+        grid-area: d;
+      }
+
+      .e {
+        grid-area: e;
+      }
+
+      .f {
+        grid-area: f;
+      }
+
+      .g {
+        grid-area: g;
+      }
+
+      .h {
+        grid-area: h;
+      }
+
+      .i {
+        grid-area: i;
+      }
+
+      .caution {
+        width: 100%;
+        margin-left: 0%;
+        font-size: 2.8vw;
+      }
+    }
+
+    .flow {
+      flex-flow: column;
+      height: 50vh;
+
+      .process {
+        width: 100%;
+
+        .text {
+          font-size: 3vw;
+        }
+      }
+
+      .arrow {
+        width: 1vw;
+        height: 30vh;
+        left: 50%;
+      }
+    }
+
+    .mail-text {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 3vh;
+      height: 73vw;
+
+      .point {
+        font-size: 3vw;
+        line-height: 350%;
+
+        .subtext {
+          font-size: 2.7vw;
+          left: 7vw;
+          margin-top: 7.5vw;
+          line-height: 130%;
+        }
+      }
+    }
+
+    .mail-caution {
+      font-size: 3.5vw;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .mail-address {
+      font-size: 6vw;
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 10vh;
+    }
   }
 }
 

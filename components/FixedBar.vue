@@ -69,6 +69,7 @@ a {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;
   line-height: 6dvh;
+  overflow: hidden;
 
   a {
     font-size: 2.5vh;
