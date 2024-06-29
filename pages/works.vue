@@ -35,8 +35,8 @@ export default {
     return {
       width: 0,
       worksData,
-      tagList: ["ドット絵", "プログラミング", "MV", "依頼制作"],
-      displayTagList: ["ドット絵", "プログラミング", "MV", "依頼制作"],
+      tagList: ["ドット絵", "依頼制作", "MV", "プログラミング"],
+      displayTagList: ["ドット絵", "依頼制作", "MV", "プログラミング"],
       activeTagFlags: [false, false, false],
       activeTagIndex: -1,
       oldActiveTagIndex: 0,
@@ -358,7 +358,7 @@ export default {
     bottom: 0;
     margin: auto;
     width: 50vw;
-    height: 80vh;
+    height: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -392,16 +392,17 @@ export default {
     }
 
     .title-container {
-      width: 40%;
+      width: 60%;
       display: flex;
       flex-flow: row;
-      justify-content: space-between;
 
       .title {
         width: 80%;
+        height: 2.3vw;
         font-size: 1.2vw;
+        line-height: calc(2.3vw - 5px);
         margin: 5px;
-        padding: 2px;
+        padding-left: 5px;
         background-color: $grid-color;
         border: 1px solid $deep-grid-color;
         box-shadow: 2px 2px $deep-grid-color;
@@ -488,7 +489,7 @@ export default {
         .title {
           width: 80%;
           height: 8vw;
-          line-height: 6vw;
+          line-height: calc(8vw - 5px);
           font-size: 4vw;
         }
 
@@ -515,16 +516,6 @@ export default {
   100% {
     transform: scale(1);
     opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    background-color: $sub-color;
   }
 }
 </style>

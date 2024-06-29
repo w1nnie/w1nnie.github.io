@@ -3,7 +3,7 @@
     "filename": "amamya_ending",
     "raw_ext": ".gif",
     "rawWidth": 0,
-    "title": "配信エンディング",
+    "title": "天宮こころ様配信エンディング",
     "desc": "にじさんじ所属ライバー 天宮こころ様の配信エンディング動画を制作させていただきました。",
     "date": 20221202,
     "links": "",
@@ -278,7 +278,7 @@
     "raw_ext": ".gif",
     "rawWidth": 0,
     "title": "ARポストカード",
-    "desc": "かざすとアニメーションが再生されるポストカード。",
+    "desc": "かざすとアニメーションが再生されるポストカード。コミティア146・148にて頒布。",
     "date": 20231104,
     "links": "",
     "linkText": "",
@@ -323,31 +323,6 @@
     "linkText": "",
     "tags": [
         "プログラミング"
-    ]
-  },
-  {
-    "filename": "steria_room",
-    "raw_ext": ".gif",
-    "rawWidth": 0,
-    "title": "",
-    "desc": "",
-    "date": 20211036,
-    "links": "",
-    "linkText": "",
-    "tags": [
-        "ドット絵"
-    ]
-  },  {
-    "filename": "steria_room",
-    "raw_ext": ".gif",
-    "rawWidth": 0,
-    "title": "",
-    "desc": "",
-    "date": 20211037,
-    "links": "",
-    "linkText": "",
-    "tags": [
-        "ドット絵"
     ]
   }
 ]
