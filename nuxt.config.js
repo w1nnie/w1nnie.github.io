@@ -1,6 +1,14 @@
+const PRODUCTION_BASE_PATH = '/Portfolio2023/docs/';
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+
+  router: {
+    base: process.env.NODE_ENV === 'production'
+      ? PRODUCTION_BASE_PATH
+      : '/'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -49,4 +57,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  generate: {
+    dir: 'docs'
+  }
 }
