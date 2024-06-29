@@ -2,7 +2,7 @@
 .index-container
   CustomTransition
   .video-container
-    video(autoplay muted loop src="~static/crt.mp4")
+    video(autoplay muted loop src="/crt.mp4")
 </template>
 
 <script>
