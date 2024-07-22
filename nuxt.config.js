@@ -13,9 +13,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Portfolio',
+    title: 'wh-negi',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ja',
     },
     meta: [
       { charset: 'utf-8' },
@@ -24,6 +24,9 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      { src: 'https://cdn.counter.dev/script.js', 'data-id': '8070b65e-9149-4678-8776-a75d64cec7ce', 'data-utcoffset': '9'}
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
