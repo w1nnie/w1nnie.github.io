@@ -117,6 +117,9 @@ export default {
       } else {
         if(item.rawWidth != 0) {
           let w = item.rawWidth * Math.floor(this.width / item.rawWidth);
+          if (w == 0) {
+            w = this.width;
+          }
           this.modalWidth = w + "px";
         } else {
           this.modalWidth = "100vw"
