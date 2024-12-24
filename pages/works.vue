@@ -211,7 +211,8 @@ export default {
   overflow: hidden;
   width: 100vw;
   height: 93vh;
-  image-rendering: pixelated;
+
+  // image-rendering: pixelated;
   position: relative;
 }
 
