@@ -21,7 +21,7 @@
   import Vue from 'vue'
 
   export default Vue.extend({
-    name: 'Animation',
+    name: 'PageAnimation',
     data() {
       return {
 

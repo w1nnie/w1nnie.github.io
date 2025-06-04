@@ -13,16 +13,16 @@
       .button(v-if="index == 26" @click="descend(),direction()" style="background-image: url(images/about/steria_town-export.gif); background-size:cover;")
   .property(:style="{opacity: propertyOpacity}")
     .profile-container.about-property(:style="{display: profileDisplay}")
-      Profile
+      PageProfile
       .revbutton(@click="profile(),ascend()" style="background-image:url(x.png); background-size:cover;")
     .atmosphere-container.about-property(:style="{display: atmosDisplay}")
-      Atmosphere
+      PageAtmosphere
       .revbutton(@click="atmosphere(),ascend()" style="background-image:url(x.png); background-size:cover;")
     .animation-container.about-property(:style="{display: animationDisplay}")
-      Animation
+      PageAnimation
       .revbutton(@click="animation(),ascend()" style="background-image:url(x.png); background-size:cover;")
     .direction-container.about-property(:style="{display: directionDisplay}")
-      Direction
+      PageDirection
       .revbutton(@click="direction(),ascend()" style="background-image:url(x.png); background-size:cover;")
   .deco
     .square1

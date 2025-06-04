@@ -140,7 +140,7 @@ export default {
         this.player.pauseVideo();
         this.selectedImageLinks = "";
       }
-    },
+    }
 
   },
   computed: {

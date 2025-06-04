@@ -17,7 +17,7 @@
   import Vue from 'vue'
 
   export default Vue.extend({
-    name: 'Atmosphere',
+    name: 'PageAtmosphere',
     data() {
       return {
 
