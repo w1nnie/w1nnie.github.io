@@ -13,7 +13,7 @@
         img.item-img(tabindex=-1 :style="{objectPosition: item.position}" :src="require(`/static/images/gallery/${item.filename}${item.raw_ext}`)")
   .modal-wrapper(:style="{display: isModalVisible}")
     .modal-bg(@click="closeModal()")
-    .modal-content(:class="activeModal" :style="{width: modalWidth}")
+    .modal-content(:class="activeModal" :style="{width: modalWidth, imageRendering: imageRendering}")
       .yt-container(v-if="selectedImageLinks != ''")
         youtube(class="iframe" ref="youtube" :width="iframeWidth" :height="iframeHeight" :video-id="selectedImageLinks")
       img(v-else :src="require(`/static/images/gallery/${selectedImageUrl}${selectedImageExt}`)")
@@ -57,7 +57,8 @@ export default {
       iframeHeight: 360,
       textDisplay: "block",
       linkDisplay: "block",
-      linkText: ""
+      linkText: "",
+      imageRendering: "pixelated"
     }
   },
   created() {
@@ -124,6 +125,11 @@ export default {
         } else {
           this.modalWidth = "100vw"
         }
+      }
+      if(this.selectedImageExt == ".gif") {
+        this.imageRendering = "pixelated"
+      } else {
+        this.imageRendering = "auto"
       }
     },
     closeModal() {

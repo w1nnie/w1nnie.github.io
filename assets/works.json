@@ -7,7 +7,7 @@
     "desc": "にじさんじ所属ライバー 天宮こころ様の配信エンディング動画を制作させていただきました。",
     "date": 20221202,
     "links": "",
-    "linkText": "https://www.youtube.com/watch?v=SiffZgVJbWw&t=7481s",
+    "linkText": "https://www.youtube.com/watch?v=SiffZgVJbWw&t=7483s",
     "tags": [
         "ドット絵", "依頼制作", "配信素材"
     ]
@@ -336,6 +336,58 @@
     "linkText": "https://x.com/GooglePlayJP/status/1865184450360889466",
     "tags": [
         "ドット絵", "依頼制作"
+    ]
+  },
+  {
+    "filename": "machikado",
+    "raw_ext": ".png",
+    "rawWidth": 0,
+    "title": "マチカドピクセル",
+    "desc": "",
+    "date": 20240520,
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "tashimakiafk",
+    "raw_ext": ".gif",
+    "rawWidth": 320,
+    "title": "離席中蓋絵",
+    "desc": "たしまきさわら様の蓋絵の配信素材を制作させていただきました。",
+    "date": 20250110,
+    "links": "",
+    "linkText": "https://x.com/TashimakiSawara/status/1877593411512918357",
+    "tags": [
+        "ドット絵", "依頼制作"
+    ]
+  },
+  {
+    "filename": "marble",
+    "raw_ext": ".gif",
+    "rawWidth": 400,
+    "title": "",
+    "desc": "",
+    "date": 20250529,
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "bigben",
+    "raw_ext": ".png",
+    "rawWidth": 0,
+    "title": "",
+    "desc": "",
+    "date": 20250602,
+    "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
     ]
   }
 ]
