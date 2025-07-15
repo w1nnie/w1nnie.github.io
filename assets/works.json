@@ -343,7 +343,7 @@
     "raw_ext": ".png",
     "rawWidth": 0,
     "title": "マチカドピクセル",
-    "desc": "",
+    "desc": "クォータービューのドット絵の習作",
     "date": 20240520,
     "links": "",
     "linkText": "",
@@ -355,13 +355,39 @@
     "filename": "tashimakiafk",
     "raw_ext": ".gif",
     "rawWidth": 320,
-    "title": "離席中蓋絵",
+    "title": "たしまきさわら様 離席中蓋絵",
     "desc": "たしまきさわら様の蓋絵の配信素材を制作させていただきました。",
     "date": 20250110,
     "links": "",
     "linkText": "https://x.com/TashimakiSawara/status/1877593411512918357",
     "tags": [
         "ドット絵", "依頼制作"
+    ]
+  },
+  {
+    "filename": "cat2lib",
+    "raw_ext": ".gif",
+    "rawWidth": 400,
+    "title": "空想少女",
+    "desc": "空想に耽るのが好きな少女のドット絵アニメーション。",
+    "date": 20250121,
+    "links": "JksHdtwd3NY",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "aurora",
+    "raw_ext": ".gif",
+    "rawWidth": 480,
+    "title": "天への祈り",
+    "desc": "作曲とリリックモーションの習作のための30秒ほどのMV。",
+    "date": 20250313,
+    "links": "EhabSfdQmNQ",
+    "linkText": "",
+    "tags": [
+        "ドット絵", "MV"
     ]
   },
   {
@@ -385,6 +411,32 @@
     "desc": "",
     "date": 20250602,
     "links": "",
+    "linkText": "",
+    "tags": [
+        "ドット絵"
+    ]
+  },
+  {
+    "filename": "KA_ed",
+    "raw_ext": ".gif",
+    "rawWidth": 480,
+    "title": "神凪アンナ様 配信ED",
+    "desc": "Re:AcT所属、神凪アンナ様の配信EDドット絵アニメーションを制作させていただきました。",
+    "date": 20250622,
+    "links": "",
+    "linkText": "https://youtu.be/0IlSOo0bEQ4?t=7957",
+    "tags": [
+        "ドット絵", "依頼制作"
+    ]
+  },
+    {
+    "filename": "venice",
+    "raw_ext": ".gif",
+    "rawWidth": 480,
+    "title": "夜歩き",
+    "desc": "ドット絵の切り替わりと音楽の盛り上げの習作。",
+    "date": 20250705,
+    "links": "zsrXMcE6E5E",
     "linkText": "",
     "tags": [
         "ドット絵"

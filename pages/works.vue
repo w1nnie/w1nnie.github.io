@@ -141,7 +141,6 @@ export default {
         this.selectedImageLinks = "";
       }
     }
-
   },
   computed: {
     filteredData() {
