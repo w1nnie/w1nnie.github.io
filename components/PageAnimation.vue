@@ -1,34 +1,38 @@
 <template lang="pug">
   .container
     .item.a
-      img(src="images/about/direction_a.gif")
+      img(src="images/about/animation_a.gif")
     .item.b
-      img(src="images/about/direction_b.gif")
+      img(src="images/about/animation_b.gif")
     .text-container.c
-      .head 印象に残す演出
-      .main 常に新たな表現や突飛な演出を探りながら作品を作っています。
+      .head なんでもアニメーション
+      .main あらゆるキャラクターの動作や自然の動きをドット絵に落とし込んでループさせることが好きです。
     .item.d
-      img(src="images/about/direction_d.gif")
+      img(src="images/about/animation_d.gif")
     .item.e
-      img(src="images/about/direction_e.gif")
+      img(src="images/about/animation_e.gif")
+    .item.f
+      img(src="images/about/animation_f.gif")
+    .item.g
+      img(src="images/about/animation_g.gif")
 </template>
 
 <script>
-  import Vue from 'vue'
+import Vue from 'vue'
 
-  export default Vue.extend({
-    name: 'PageDirection',
-    data() {
-      return {
-
-      }
-    },
-    methods: {}
-  })
+export default Vue.extend({
+  name: 'PageAnimation',
+  data() {
+    return {}
+  },
+  methods: {},
+})
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/sass/app";
+@use '/assets/sass/app';
+@use '/assets/sass/variables' as vars;
+@use '/assets/sass/common' as cm;
 
 .container {
   width: 100%;
@@ -36,17 +40,17 @@
   transition: all 0.2s;
   display: grid;
   grid-template-areas:
-    "a b c"
-    "d d e"
-    "d d e";
-  grid-template-rows: 1fr 1fr 1fr;
+    'a b c'
+    'd e f'
+    'd e g';
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 3%;
-  overflow: hidden;
   animation: rotate 0.4s cubic-bezier(0, 0.78, 0.46, 0.99);
 }
 
 .item {
+  overflow: hidden;
   animation: inset 0.4s cubic-bezier(0, 0.78, 0.46, 0.99);
 }
 
@@ -58,17 +62,18 @@
   width: 100%;
   height: 100%;
   padding: 7%;
+  overflow: hidden;
   text-align: center;
-  border: 1px solid $deep-grid-color;
-  background-color: $bg-color;
+  border: 1px solid vars.$deep-grid-color;
+  background-color: vars.$bg-color;
 
   .head {
-    font-size: 1.8vw;
+    font-size: 1.7vw;
     width: 100%;
   }
 
   .main {
-    font-size: 1vw;
+    font-size: 0.95vw;
     width: 100%;
     margin-top: 5%;
   }
@@ -99,13 +104,25 @@ img {
   grid-area: e;
 }
 
-@include smartphone {
+.f {
+  grid-area: f;
+
+  img {
+    transform: translateY(-3%);
+  }
+}
+
+.g {
+  grid-area: g;
+}
+
+@include cm.smartphone {
   .container {
     grid-template-areas:
-      "c"
-      "d"
-      "a"
-      "b";
+      'c'
+      'a'
+      'b'
+      'f';
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 1%;
@@ -121,7 +138,9 @@ img {
     }
   }
 
-  .e {
+  .d,
+  .e,
+  .g {
     display: none;
   }
 }
@@ -139,5 +158,4 @@ img {
     opacity: 1;
   }
 }
-
 </style>

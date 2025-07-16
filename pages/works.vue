@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import worksData from "@/assets/works.json";
+import worksData from '@/assets/works.json';
 
 export default {
   name: 'WorksPage',
@@ -35,48 +35,47 @@ export default {
     return {
       width: 0,
       worksData,
-      tagList: ["ドット絵", "依頼制作", "MV", "プログラミング"],
-      displayTagList: ["ドット絵", "依頼制作", "MV", "プログラミング"],
+      tagList: ['ドット絵', '依頼制作', 'MV', 'プログラミング'],
+      displayTagList: ['ドット絵', '依頼制作', 'MV', 'プログラミング'],
       activeTagFlags: [false, false, false],
       activeTagIndex: -1,
       oldActiveTagIndex: 0,
-      activeClass: "works-tags-item-active",
-      inactiveClass: "works-tags-item",
+      activeClass: 'works-tags-item-active',
+      inactiveClass: 'works-tags-item',
       isShow: false,
       showIndex: 0,
       show: true,
-      selectedImageLinks: "",
-      selectedImageUrl: "steria_town",
-      selectedImageExt: ".gif",
-      selectedDescription: "",
-      selectedTitle: "",
-      isModalVisible: "none",
-      activeModal: "",
-      modalWidth: "50vw",
+      selectedImageLinks: '',
+      selectedImageUrl: 'steria_town',
+      selectedImageExt: '.gif',
+      selectedDescription: '',
+      selectedTitle: '',
+      isModalVisible: 'none',
+      activeModal: '',
+      modalWidth: '50vw',
       iframeWidth: 640,
       iframeHeight: 360,
-      textDisplay: "block",
-      linkDisplay: "block",
-      linkText: "",
-      imageRendering: "pixelated"
-    }
+      textDisplay: 'block',
+      linkDisplay: 'block',
+      linkText: '',
+      imageRendering: 'pixelated',
+    };
   },
   created() {
     if (process.client) {
-      window.addEventListener('resize', this.handleResize)
-      this.handleResize()
+      window.addEventListener('resize', this.handleResize);
+      this.handleResize();
     }
   },
   methods: {
     handleResize() {
-      this.width = window.innerWidth
-      if(this.width > 767){
+      this.width = window.innerWidth;
+      if (this.width > 767) {
         this.iframeWidth = this.width / 2;
       } else {
         this.iframeWidth = this.width;
       }
-      this.iframeHeight = this.iframeWidth * 9 / 16;
-
+      this.iframeHeight = (this.iframeWidth * 9) / 16;
     },
     enableTag(index) {
       this.oldActiveTagIndex = this.activeTagIndex;
@@ -94,53 +93,52 @@ export default {
       this.selectedImageUrl = item.filename;
       this.selectedImageExt = item.raw_ext;
       this.selectedTitle = item.title;
-      this.selectedDescription = item.desc != "" ? "▶" + item.desc : "";
-      this.isModalVisible = "block";
-      this.activeModal = "modal-active";
+      this.selectedDescription = item.desc != '' ? '▶' + item.desc : '';
+      this.isModalVisible = 'block';
+      this.activeModal = 'modal-active';
       this.linkText = item.linkText;
-      if(item.linkText != "") {
-        this.linkDisplay = "block";
+      if (item.linkText != '') {
+        this.linkDisplay = 'block';
       } else {
-        this.linkDisplay = "none";
+        this.linkDisplay = 'none';
       }
-      if(item.title == "") {
-        this.textDisplay = "none";
+      if (item.title == '') {
+        this.textDisplay = 'none';
       } else {
-        this.textDisplay = "block";
+        this.textDisplay = 'block';
       }
-      if(this.width > 767){
-        if(item.rawWidth != 0) {
-          let w = item.rawWidth * Math.floor(this.width * 0.5 / item.rawWidth);
-          this.modalWidth = w + "px";
+      if (this.width > 767) {
+        if (item.rawWidth != 0) {
+          let w =
+            item.rawWidth * Math.floor((this.width * 0.5) / item.rawWidth);
+          this.modalWidth = w + 'px';
         } else {
-          this.modalWidth = "50vw"
+          this.modalWidth = '50vw';
         }
+      } else if (item.rawWidth != 0) {
+        let w = item.rawWidth * Math.floor(this.width / item.rawWidth);
+        if (w == 0) {
+          w = this.width;
+        }
+        this.modalWidth = w + 'px';
       } else {
-        if(item.rawWidth != 0) {
-          let w = item.rawWidth * Math.floor(this.width / item.rawWidth);
-          if (w == 0) {
-            w = this.width;
-          }
-          this.modalWidth = w + "px";
-        } else {
-          this.modalWidth = "100vw"
-        }
+        this.modalWidth = '100vw';
       }
-      if(this.selectedImageExt == ".gif") {
-        this.imageRendering = "pixelated"
+      if (this.selectedImageExt == '.gif') {
+        this.imageRendering = 'pixelated';
       } else {
-        this.imageRendering = "auto"
+        this.imageRendering = 'auto';
       }
     },
     closeModal() {
-      this.isModalVisible = "none";
-      this.activeModal = "";
-      if(this.selectedImageLinks != ""){
+      this.isModalVisible = 'none';
+      this.activeModal = '';
+      if (this.selectedImageLinks != '') {
         console.log(this.player);
         this.player.pauseVideo();
-        this.selectedImageLinks = "";
+        this.selectedImageLinks = '';
       }
-    }
+    },
   },
   computed: {
     filteredData() {
@@ -149,8 +147,8 @@ export default {
       let ati = this.activeTagIndex;
       if (this.activeTagIndex == -1) {
       } else {
-        data = data.filter(function(item, index) {
-          let isIncludeTag = item.tags.some(a => a == t[ati]);
+        data = data.filter(function (item, index) {
+          let isIncludeTag = item.tags.some((a) => a == t[ati]);
           return isIncludeTag;
         });
       }
@@ -158,57 +156,47 @@ export default {
     },
     sortedData() {
       let data = this.filteredData.slice();
-      data = data.sort(function(a, b) {
+      data = data.sort(function (a, b) {
         return b.date - a.date;
       });
       return data;
     },
-    responsiveColumns: function() {
+    responsiveColumns: function () {
       if (this.width > 1000) {
         // this.columns = 5;
-        return {
-          "grid-template-columns": "repeat(5, 1fr)"
-        }
+        return {};
       } else if (this.width > 768) {
-        return {
-          "grid-template-columns": "repeat(3, 1fr)"
-        }
+        return {};
       } else {
-        return {
-          "grid-template-columns": "repeat(2, 1fr)"
-        }
+        return {};
       }
     },
-    itemHeight: function() {
+    itemHeight: function () {
       if (this.width > 1000) {
         // this.columns = 5;
-        return {
-          "height": "8.8vw"
-        }
+        return {};
       } else if (this.width > 768) {
-        return {
-          "height": "33vw"
-        }
+        return {};
       } else {
-        return {
-          "height": "49.5vw"
-        }
+        return {};
       }
     },
     player() {
-      return this.$refs.youtube.player
-    }
+      return this.$refs.youtube.player;
+    },
   },
   destroyed() {
     if (process.client) {
-      window.removeEventListener('resize', this.handleResize)
+      window.removeEventListener('resize', this.handleResize);
     }
-  }
-}
+  },
+};
 </script>
 
 <style scoped lang="scss">
-@import "/assets/sass/app";
+@use '/assets/sass/app';
+@use '/assets/sass/variables' as vars;
+@use '/assets/sass/common' as cm;
 
 .works-container {
   @extend %grid;
@@ -232,21 +220,22 @@ export default {
   font-size: 1vw;
   text-align: right;
   line-height: 1vw;
-  filter: drop-shadow(2px 2px 0 $deep-grid-color) drop-shadow(-0.1px -0.1px 0 $deep-grid-color);
+  filter: drop-shadow(2px 2px 0 vars.$deep-grid-color)
+    drop-shadow(-0.1px -0.1px 0 vars.$deep-grid-color);
 
   .works-tags-item {
     position: relative;
     cursor: pointer;
-    background-color: $bg-color;
+    background-color: vars.$bg-color;
     line-height: 5vh;
     height: 5vh;
     padding-right: 0.6vw;
     clip-path: polygon(0 20%, 10% 0, 100% 0, 100% 100%, 10% 100%, 0 80%);
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
-      border: 1px solid $deep-grid-color;
+      border: 1px solid vars.$deep-grid-color;
       border-radius: 100%;
       width: 1vh;
       height: 1vh;
@@ -257,7 +246,7 @@ export default {
 
     &:hover {
       animation: fadeIn 0.3s ease;
-      background-color: $sub-color;
+      background-color: vars.$sub-color;
       color: #fff;
     }
   }
@@ -265,7 +254,7 @@ export default {
   .works-tags-item-active {
     cursor: pointer;
     position: relative;
-    background-color: $theme-color;
+    background-color: vars.$theme-color;
     color: #fff;
     line-height: 5vh;
     height: 5vh;
@@ -273,9 +262,9 @@ export default {
     clip-path: polygon(0 20%, 10% 0, 100% 0, 100% 100%, 10% 100%, 0 80%);
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
-      border: 1px solid $deep-grid-color;
+      border: 1px solid vars.$deep-grid-color;
       border-radius: 100%;
       width: 1vh;
       height: 1vh;
@@ -285,7 +274,7 @@ export default {
     }
 
     &:hover {
-      background-color: $theme-color;
+      background-color: vars.$theme-color;
     }
   }
 }
@@ -298,8 +287,7 @@ export default {
   vertical-align: top;
   width: 80vw;
   height: 93vh;
-  overflow-x: visible;
-  overflow-y: scroll;
+  overflow: visible scroll;
   transform: rotate3d(0, 1, 0, 0deg);
   z-index: 1;
   transition: transform 0.3s ease-in-out;
@@ -314,8 +302,7 @@ export default {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 1vw;
-  row-gap: 2vw;
+  gap: 2vw 1vw;
   padding: 2vw;
 }
 
@@ -324,8 +311,8 @@ export default {
   height: auto;
   object-fit: cover;
   cursor: pointer;
-  border: 1px solid $deep-grid-color;
-  box-shadow: 2px 2px $deep-grid-color;
+  border: 1px solid vars.$deep-grid-color;
+  box-shadow: 2px 2px vars.$deep-grid-color;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
 
@@ -361,10 +348,7 @@ export default {
 
   .modal-content {
     position: absolute;
-    left: 0;
-    right: 0;
-    top: -10vh;
-    bottom: 0;
+    inset: -10vh 0 0;
     margin: auto;
     width: 50vw;
     height: 0;
@@ -412,9 +396,9 @@ export default {
         line-height: calc(2.3vw - 5px);
         margin: 5px;
         padding-left: 5px;
-        background-color: $grid-color;
-        border: 1px solid $deep-grid-color;
-        box-shadow: 2px 2px $deep-grid-color;
+        background-color: vars.$grid-color;
+        border: 1px solid vars.$deep-grid-color;
+        box-shadow: 2px 2px vars.$deep-grid-color;
       }
 
       .link-button {
@@ -422,9 +406,9 @@ export default {
         width: 2.3vw;
         margin: 5px;
         padding: 2px;
-        background-color: $grid-color;
-        border: 1px solid $deep-grid-color;
-        box-shadow: 2px 2px $deep-grid-color;
+        background-color: vars.$grid-color;
+        border: 1px solid vars.$deep-grid-color;
+        box-shadow: 2px 2px vars.$deep-grid-color;
 
         &:hover {
           background-color: rgb(170 230 160 / 100%);
@@ -437,29 +421,29 @@ export default {
       margin: 5px;
       padding: 2px;
       padding-left: 5px;
-      background-color: $accent-color;
-      border: 1px solid $deep-grid-color;
-      box-shadow: 2px 2px $deep-grid-color;
+      background-color: vars.$accent-color;
+      border: 1px solid vars.$deep-grid-color;
+      box-shadow: 2px 2px vars.$deep-grid-color;
     }
   }
 }
 
-@include smartphone {
+@include cm.smartphone {
   .works-container {
     background-image:
       repeating-linear-gradient(
         90deg,
-        $grid-color,
-        $grid-color 1px,
+        vars.$grid-color,
+        vars.$grid-color 1px,
         transparent 1px,
         transparent 8vw
       ),
       repeating-linear-gradient(
         0deg,
-        $grid-color,
-        $grid-color 1px,
-        $bg-color 1px,
-        $bg-color 8vw
+        vars.$grid-color,
+        vars.$grid-color 1px,
+        vars.$bg-color 1px,
+        vars.$bg-color 8vw
       );
     background-size: 8vw;
   }

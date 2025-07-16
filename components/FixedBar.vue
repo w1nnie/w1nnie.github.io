@@ -15,16 +15,18 @@
 
 <script>
 export default {
-  name: 'FixedBar'
+  name: 'FixedBar',
 }
 </script>
 
 <style scoped lang="scss">
-@import "/assets/sass/app";
+@use '/assets/sass/app';
+@use '/assets/sass/variables' as vars;
+@use '/assets/sass/common' as cm;
 
 a {
   text-decoration: none;
-  color: $theme-color;
+  color: vars.$theme-color;
   font-size: 2.4vh;
 }
 
@@ -34,7 +36,7 @@ a {
   width: 100%;
   height: 7dvh;
   top: 0;
-  background-color: $bg-color;
+  background-color: vars.$bg-color;
   display: grid;
   grid-template-columns: 1fr 9fr 1fr 1fr 1fr;
   text-align: center;
@@ -42,7 +44,7 @@ a {
   text-decoration: none;
 
   *:hover {
-    color: $sub-color;
+    color: vars.$sub-color;
     transition: 0.3s;
   }
 
@@ -52,7 +54,7 @@ a {
   }
 }
 
-@include smartphone {
+@include cm.smartphone {
   .header-pc {
     display: none;
   }
@@ -64,7 +66,7 @@ a {
   width: 100%;
   height: 6dvh;
   bottom: 0;
-  background-color: $bg-color;
+  background-color: vars.$bg-color;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;
@@ -76,7 +78,7 @@ a {
   }
 }
 
-@include pc {
+@include cm.pc {
   .footer-sp {
     display: none;
   }

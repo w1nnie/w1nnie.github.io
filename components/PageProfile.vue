@@ -23,23 +23,22 @@
             img(src="images/about/logo-booth.png")
 </template>
 
-
 <script>
-  import Vue from 'vue'
+import Vue from 'vue'
 
-  export default Vue.extend({
-    name: 'PageProfile',
-    data() {
-      return {
-
-      }
-    },
-    methods: {}
-  })
+export default Vue.extend({
+  name: 'PageProfile',
+  data() {
+    return {}
+  },
+  methods: {},
+})
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/sass/app";
+@use '/assets/sass/app';
+@use '/assets/sass/variables' as vars;
+@use '/assets/sass/common' as cm;
 
 .container {
   width: calc(72vw * 0.89);
@@ -56,7 +55,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 1px solid $grid-color;
+  border: 1px solid vars.$grid-color;
 }
 
 %corner-border {
@@ -68,8 +67,8 @@
 .border-leftTop {
   @extend %corner-border;
 
-  border-top: 2px solid $deep-grid-color;
-  border-left: 2px solid $deep-grid-color;
+  border-top: 2px solid vars.$deep-grid-color;
+  border-left: 2px solid vars.$deep-grid-color;
   top: -1px;
   left: -1px;
 }
@@ -77,8 +76,8 @@
 .border-rightTop {
   @extend %corner-border;
 
-  border-top: 2px solid $deep-grid-color;
-  border-right: 2px solid $deep-grid-color;
+  border-top: 2px solid vars.$deep-grid-color;
+  border-right: 2px solid vars.$deep-grid-color;
   top: -1px;
   right: -1px;
 }
@@ -86,8 +85,8 @@
 .border-leftBottom {
   @extend %corner-border;
 
-  border-bottom: 2px solid $deep-grid-color;
-  border-left: 2px solid $deep-grid-color;
+  border-bottom: 2px solid vars.$deep-grid-color;
+  border-left: 2px solid vars.$deep-grid-color;
   bottom: -1px;
   left: -1px;
 }
@@ -95,14 +94,14 @@
 .border-rightBottom {
   @extend %corner-border;
 
-  border-bottom: 2px solid $deep-grid-color;
-  border-right: 2px solid $deep-grid-color;
+  border-bottom: 2px solid vars.$deep-grid-color;
+  border-right: 2px solid vars.$deep-grid-color;
   bottom: -1px;
   right: -1px;
 }
 
 .id-card {
-  background: $bg-color;
+  background: vars.$bg-color;
   position: absolute;
   width: 80%;
   height: 80%;
@@ -111,24 +110,25 @@
   transition: all 0.2s;
   display: grid;
   grid-template-areas:
-    "a b b b"
-    "c c c d"
-    "c c c d";
+    'a b b b'
+    'c c c d'
+    'c c c d';
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 0.5fr;
   gap: 2%;
   padding: 5%;
-  border: 1px solid $deep-grid-color;
-  box-shadow: 2px 2px $deep-grid-color;
+  border: 1px solid vars.$deep-grid-color;
+  box-shadow: 2px 2px vars.$deep-grid-color;
 }
 
 .a {
-  // background-image: url("/chara.png");
-  // background-size: contain;
-  // background-repeat: no-repeat;
-  // background-position: 50% 50%;
+  // background-image: url("/chara.png");background-imagebackground-imagebackground-imagebackground-imagebackground-image
+  // background-size: contain;background-sizebackground-sizebackground-sizebackground-sizebackground-size
+  // background-repeat: no-repeat;background-repeatbackground-repeatbackground-repeatbackground-repeatbackground-repeat
+  // background-position: 50% 50%;background-positionbackground-positionbackground-positionbackground-positionbackground-position
+  // grid-area: a;//grid-area//grid-area//;
   grid-area: a;
-  border: 1px solid $deep-grid-color;
+  border: 1px solid vars.$deep-grid-color;
 }
 
 .b {
@@ -143,7 +143,7 @@
     display: flex;
     align-items: center;
     height: 20%;
-    border: 1px solid $deep-grid-color;
+    border: 1px solid vars.$deep-grid-color;
     padding: 2%;
   }
 
@@ -152,14 +152,14 @@
     display: flex;
     align-items: center;
     height: 70%;
-    border: 1px solid $deep-grid-color;
+    border: 1px solid vars.$deep-grid-color;
   }
 }
 
 .c {
   position: relative;
   grid-area: c;
-  border: 1px solid $deep-grid-color;
+  border: 1px solid vars.$deep-grid-color;
 
   .text-container {
     position: absolute;
@@ -174,21 +174,20 @@
       top: 1.3vw;
       width: 100%;
       height: 80%;
-      background-image:
-        repeating-linear-gradient(
-          0deg,
-          $grid-color,
-          $grid-color 1px,
-          transparent 1px,
-          transparent 1.96vw
-        );
+      background-image: repeating-linear-gradient(
+        0deg,
+        vars.$grid-color,
+        vars.$grid-color 1px,
+        transparent 1px,
+        transparent 1.96vw
+      );
     }
   }
 }
 
 .d {
   grid-area: d;
-  border: 1px solid $deep-grid-color;
+  border: 1px solid vars.$deep-grid-color;
 }
 
 .banner-container {
@@ -203,15 +202,15 @@
     position: relative;
     width: 3vw;
     height: 3vw;
-    border: 1px solid $deep-grid-color;
-    box-shadow: 2px 2px $deep-grid-color;
+    border: 1px solid vars.$deep-grid-color;
+    box-shadow: 2px 2px vars.$deep-grid-color;
 
     &:hover {
       transform: scale(1.05);
     }
 
     &:active {
-      box-shadow: 0 0 $deep-grid-color;
+      box-shadow: 0 0 vars.$deep-grid-color;
       transform: translate(2px, 2px);
     }
   }
@@ -249,7 +248,7 @@
   }
 }
 
-@include smartphone {
+@include cm.smartphone {
   .container {
     width: 72vw;
     height: 50vw;
@@ -278,14 +277,13 @@
         top: 0.9vw;
         width: 100%;
         height: 80%;
-        background-image:
-          repeating-linear-gradient(
-            0deg,
-            $grid-color,
-            $grid-color 1px,
-            transparent 1px,
-            transparent 3.3vw
-          );
+        background-image: repeating-linear-gradient(
+          0deg,
+          vars.$grid-color,
+          vars.$grid-color 1px,
+          transparent 1px,
+          transparent 3.3vw
+        );
       }
     }
   }
@@ -319,5 +317,4 @@
     transform: scale(1.05);
   }
 }
-
 </style>

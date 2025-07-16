@@ -1,8 +1,8 @@
 // Variables
-@import "variables";
+@use "variables";
 
 // common
-@import "common";
+@use "common";
 
 .page-enter-active,
 .page-leave-active {

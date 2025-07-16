@@ -63,12 +63,14 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'ContactPage'
+  name: 'ContactPage',
 })
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/sass/app";
+@use '/assets/sass/app';
+@use '/assets/sass/variables' as vars;
+@use '/assets/sass/common' as cm;
 
 .contact-container {
   @extend %grid;
@@ -82,20 +84,20 @@ export default Vue.extend({
 .head {
   font-size: 3vw;
   width: 25%;
-  background: $accent-color;
-  border: solid 1px $deep-grid-color;
-  box-shadow: 2px 2px $deep-grid-color;
+  background: vars.$accent-color;
+  border: solid 1px vars.$deep-grid-color;
+  box-shadow: 2px 2px vars.$deep-grid-color;
   margin: 3vh 0;
   text-align: center;
-  color: $deep-grid-color;
+  color: vars.$deep-grid-color;
 }
 
 .second-head {
-  background: $sub-color;
+  background: vars.$sub-color;
   font-size: 1.7vw;
   width: 100%;
   margin: 1vh 0;
-  color: $deep-grid-color;
+  color: vars.$deep-grid-color;
   text-align: center;
 }
 
@@ -114,9 +116,9 @@ export default Vue.extend({
     .pixelart-container {
       width: 100%;
       height: 70vh;
-      background: $bg-color;
-      border: solid 1px $deep-grid-color;
-      box-shadow: 2px 2px $deep-grid-color;
+      background: vars.$bg-color;
+      border: solid 1px vars.$deep-grid-color;
+      box-shadow: 2px 2px vars.$deep-grid-color;
       display: grid;
       grid-template-columns: 1fr 3fr 5fr;
       grid-template-rows: 1fr 3fr 3fr;
@@ -132,7 +134,7 @@ export default Vue.extend({
 
         .subitemtext {
           font-size: 1vw;
-          color: $theme-color;
+          color: vars.$theme-color;
         }
 
         .sample {
@@ -144,26 +146,26 @@ export default Vue.extend({
         img {
           max-height: 22vh;
           height: 10vw;
-          border: solid 1px $deep-grid-color;
+          border: solid 1px vars.$deep-grid-color;
           image-rendering: pixelated;
         }
       }
 
       .title {
         font-size: 1.5vw;
-        border: 1px solid $deep-grid-color;
+        border: 1px solid vars.$deep-grid-color;
       }
 
       .anime {
-        background: $grid-color;
-        color: $deep-grid-color;
-        border: 1px solid $deep-grid-color;
+        background: vars.$grid-color;
+        color: vars.$deep-grid-color;
+        border: 1px solid vars.$deep-grid-color;
       }
 
       .size {
-        background: $grid-color;
-        color: $deep-grid-color;
-        border: 1px solid $deep-grid-color;
+        background: vars.$grid-color;
+        color: vars.$deep-grid-color;
+        border: 1px solid vars.$deep-grid-color;
         line-height: 0%;
       }
 
@@ -186,13 +188,13 @@ export default Vue.extend({
       width: 56%;
       display: inline-block;
       font-size: 1vw;
-      color: $deep-grid-color;
+      color: vars.$deep-grid-color;
       margin-left: 22%;
       margin-top: 1vh;
       padding: 1vw;
-      background: $bg-color;
-      border: 1px solid $deep-grid-color;
-      box-shadow: 2px 2px $deep-grid-color;
+      background: vars.$bg-color;
+      border: 1px solid vars.$deep-grid-color;
+      box-shadow: 2px 2px vars.$deep-grid-color;
     }
 
     .mv {
@@ -211,16 +213,16 @@ export default Vue.extend({
 
     .process {
       width: 20%;
-      background: $bg-color;
-      border: solid 1px $deep-grid-color;
-      box-shadow: 2px 2px $deep-grid-color;
+      background: vars.$bg-color;
+      border: solid 1px vars.$deep-grid-color;
+      box-shadow: 2px 2px vars.$deep-grid-color;
       padding: 0 0.2vw;
       z-index: 2;
 
       .text {
         margin: 0.6vw;
         font-size: 0.86vw;
-        color: $deep-grid-color;
+        color: vars.$deep-grid-color;
       }
     }
 
@@ -238,12 +240,12 @@ export default Vue.extend({
     display: inline-block;
     width: 70%;
     margin-left: 15%;
-    background: $bg-color;
-    border: solid 1px $deep-grid-color;
-    box-shadow: 2px 2px $deep-grid-color;
+    background: vars.$bg-color;
+    border: solid 1px vars.$deep-grid-color;
+    box-shadow: 2px 2px vars.$deep-grid-color;
     margin-bottom: 10vh;
     padding: 0.5vw;
-    color: $deep-grid-color;
+    color: vars.$deep-grid-color;
 
     .point {
       font-size: 1.1vw;
@@ -265,17 +267,17 @@ export default Vue.extend({
     font-size: 1vw;
     width: 60%;
     margin-left: 20%;
-    color: $deep-grid-color;
+    color: vars.$deep-grid-color;
     margin-bottom: 1vh;
   }
 
   .mail-address {
     font-size: 3vw;
-    color: $theme-color;
+    color: vars.$theme-color;
     font-family: Helvetica, Arial;
-    background: $bg-color;
-    border: 1px solid $deep-grid-color;
-    box-shadow: 2px 2px $deep-grid-color;
+    background: vars.$bg-color;
+    border: 1px solid vars.$deep-grid-color;
+    box-shadow: 2px 2px vars.$deep-grid-color;
     width: 60%;
     margin-left: 20%;
     margin-bottom: 20vh;
@@ -284,22 +286,21 @@ export default Vue.extend({
   }
 }
 
-@include smartphone {
+@include cm.smartphone {
   .contact-container {
-    background-image:
-      repeating-linear-gradient(
+    background-image: repeating-linear-gradient(
         90deg,
-        $grid-color,
-        $grid-color 1px,
+        vars.$grid-color,
+        vars.$grid-color 1px,
         transparent 1px,
         transparent 8vw
       ),
       repeating-linear-gradient(
         0deg,
-        $grid-color,
-        $grid-color 1px,
-        $bg-color 1px,
-        $bg-color 8vw
+        vars.$grid-color,
+        vars.$grid-color 1px,
+        vars.$bg-color 1px,
+        vars.$bg-color 8vw
       );
     background-size: 8vw;
   }
@@ -318,10 +319,10 @@ export default Vue.extend({
     .menu {
       .pixelart-container {
         grid-template-areas:
-          "e a"
-          "f c"
-          "g b"
-          "h d";
+          'e a'
+          'f c'
+          'g b'
+          'h d';
         grid-template-columns: 1fr 4fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
 
@@ -453,5 +454,4 @@ export default Vue.extend({
     }
   }
 }
-
 </style>

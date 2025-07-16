@@ -30,91 +30,93 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import Atmosphere from '/components/atmosphere.vue';
+import Vue from 'vue'
+import Atmosphere from '/components/PageAtmosphere.vue'
 
 export default Vue.extend({
   name: 'AboutPage',
   data() {
     return {
       pixelNumbers: 45,
-      pixelDisplay: "block",
+      pixelDisplay: 'block',
       pixelOpacity: 1,
-      atmosDisplay: "none",
-      animationDisplay: "none",
-      directionDisplay: "none",
-      profileDisplay: "none",
+      atmosDisplay: 'none',
+      animationDisplay: 'none',
+      directionDisplay: 'none',
+      profileDisplay: 'none',
       propertyOpacity: 1,
     }
   },
   mounted() {
-    if(window.innerWidth < 768){
-      this.profileDisplay = "block";
-      this.atmosDisplay = "block";
-      this.animationDisplay = "block";
-      this.directionDisplay = "block";
-      console.log("block");
+    if (window.innerWidth < 768) {
+      this.profileDisplay = 'block'
+      this.atmosDisplay = 'block'
+      this.animationDisplay = 'block'
+      this.directionDisplay = 'block'
+      console.log('block')
     }
   },
   methods: {
     descend() {
-      this.propertyOpacity = 1;
-      this.pixelOpacity = 0;
-      console.log("clicked");
+      this.propertyOpacity = 1
+      this.pixelOpacity = 0
+      console.log('clicked')
       setTimeout(() => {
-        this.pixelDisplay = "none";
-      }, 500);
+        this.pixelDisplay = 'none'
+      }, 500)
     },
     ascend() {
-      this.pixelDisplay = "block";
-      this.pixelOpacity = 1;
-      this.propertyOpacity = 0;
+      this.pixelDisplay = 'block'
+      this.pixelOpacity = 1
+      this.propertyOpacity = 0
       setTimeout(() => {
-        this.propertyDisplay = "none";
-      }, 500);
+        this.propertyDisplay = 'none'
+      }, 500)
     },
     atmosphere() {
-      if(this.atmosDisplay == "none") {
-        this.atmosDisplay = "block";
+      if (this.atmosDisplay == 'none') {
+        this.atmosDisplay = 'block'
       } else {
         setTimeout(() => {
-          this.atmosDisplay = "none";
-        }, 500);
+          this.atmosDisplay = 'none'
+        }, 500)
       }
     },
     animation() {
-      if(this.animationDisplay == "none") {
-        this.animationDisplay = "block";
+      if (this.animationDisplay == 'none') {
+        this.animationDisplay = 'block'
       } else {
         setTimeout(() => {
-          this.animationDisplay = "none";
-        }, 500);
+          this.animationDisplay = 'none'
+        }, 500)
       }
     },
     direction() {
-      if(this.directionDisplay == "none") {
-        this.directionDisplay = "block";
+      if (this.directionDisplay == 'none') {
+        this.directionDisplay = 'block'
       } else {
         setTimeout(() => {
-          this.directionDisplay = "none";
-        }, 500);
+          this.directionDisplay = 'none'
+        }, 500)
       }
     },
     profile() {
-      if(this.profileDisplay == "none") {
-        this.profileDisplay = "block";
+      if (this.profileDisplay == 'none') {
+        this.profileDisplay = 'block'
       } else {
         setTimeout(() => {
-          this.profileDisplay = "none";
-        }, 500);
+          this.profileDisplay = 'none'
+        }, 500)
       }
-    }
-  }
+    },
+  },
 })
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/sass/app";
+@use '/assets/sass/app';
+@use '/assets/sass/variables' as vars;
+@use '/assets/sass/common' as cm;
 
 .about-container {
   @extend %grid;
@@ -129,7 +131,7 @@ export default Vue.extend({
 
 .pixel-container {
   position: absolute;
-  bottom: calc((100% - 40vw)/2 - 1.68vw);
+  bottom: calc((100% - 40vw) / 2 - 1.68vw);
   left: calc(14vw + 1px);
   width: 72vw;
   height: 40vw;
@@ -144,7 +146,7 @@ export default Vue.extend({
     transition: all 0.2s;
     user-select: none;
     background-size: cover;
-    border: 1px solid $grid-color;
+    border: 1px solid vars.$grid-color;
     background-color: rgb(246 246 246 / 60%);
 
     &:nth-child(even) {
@@ -154,7 +156,7 @@ export default Vue.extend({
     &:nth-child(20) {
       cursor: pointer;
       transition: all 0.1s ease-out;
-      border: 1px solid $deep-grid-color;
+      border: 1px solid vars.$deep-grid-color;
 
       &:hover {
         transform: scale(1.1);
@@ -165,7 +167,7 @@ export default Vue.extend({
     &:nth-child(22) {
       cursor: pointer;
       transition: all 0.1s ease-out;
-      border: 1px solid $deep-grid-color;
+      border: 1px solid vars.$deep-grid-color;
 
       &:hover {
         transform: scale(1.1);
@@ -176,7 +178,7 @@ export default Vue.extend({
     &:nth-child(24) {
       cursor: pointer;
       transition: all 0.1s ease-out;
-      border: 1px solid $deep-grid-color;
+      border: 1px solid vars.$deep-grid-color;
 
       &:hover {
         transform: scale(1.1);
@@ -187,7 +189,7 @@ export default Vue.extend({
     &:nth-child(26) {
       cursor: pointer;
       transition: all 0.1s ease-out;
-      border: 1px solid $deep-grid-color;
+      border: 1px solid vars.$deep-grid-color;
 
       &:hover {
         transform: scale(1.1);
@@ -242,7 +244,7 @@ export default Vue.extend({
   top: 7dvh;
   width: 26vw;
   height: calc(16vw + 1px);
-  background-color: $bg-color;
+  background-color: vars.$bg-color;
   z-index: 0;
 }
 
@@ -252,14 +254,14 @@ export default Vue.extend({
   bottom: 0%;
   width: calc(26vw - 1px);
   height: 16vw;
-  background-color: $bg-color;
+  background-color: vars.$bg-color;
   z-index: 0;
 }
 
-@include smartphone {
+@include cm.smartphone {
   .about-container {
     background-image: none;
-    background-color: $bg-color;
+    background-color: vars.$bg-color;
   }
 
   .pixel-container {
@@ -292,5 +294,4 @@ export default Vue.extend({
     margin-bottom: 10vh;
   }
 }
-
 </style>

@@ -13,9 +13,9 @@ export default Vue.extend({
 })
 </script>
 
-
 <style scoped lang="scss">
-@import "/assets/sass/app";
+@use '/assets/sass/app';
+@use '/assets/sass/variables' as vars;
 
 .index-container {
   background-color: #000;
@@ -33,5 +33,4 @@ export default Vue.extend({
     object-fit: cover;
   }
 }
-
 </style>

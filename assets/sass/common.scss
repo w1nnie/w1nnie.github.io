@@ -1,11 +1,11 @@
-@import "variables";
+@use "variables" as vars;
 
 body {
   margin: 0;
   font-family: fot-rodin-pron, sans-serif;
   font-weight: 600;
   font-style: normal;
-  color: $theme-color;
+  color: vars.$theme-color;
 }
 
 html {
@@ -20,17 +20,17 @@ html.wf-active {
   background-image:
     repeating-linear-gradient(
       90deg,
-      $grid-color,
-      $grid-color 1px,
+      vars.$grid-color,
+      vars.$grid-color 1px,
       transparent 1px,
       transparent 2vw
     ),
     repeating-linear-gradient(
       0deg,
-      $grid-color,
-      $grid-color 1px,
-      $bg-color 1px,
-      $bg-color 2vw
+      vars.$grid-color,
+      vars.$grid-color 1px,
+      vars.$bg-color 1px,
+      vars.$bg-color 2vw
     );
   background-size: 4vw;
 }
@@ -39,17 +39,17 @@ html.wf-active {
   background-image:
     repeating-linear-gradient(
       90deg,
-      $grid-color,
-      $grid-color 1px,
+      vars.$grid-color,
+      vars.$grid-color 1px,
       transparent 1px,
       transparent 4vw
     ),
     repeating-linear-gradient(
       0deg,
-      $grid-color,
-      $grid-color 1px,
-      $bg-color 1px,
-      $bg-color 4vw
+      vars.$grid-color,
+      vars.$grid-color 1px,
+      vars.$bg-color 1px,
+      vars.$bg-color 4vw
     );
   background-size: 8vw;
 }

@@ -8,21 +8,23 @@ export default {
   name: 'CustomTransition',
   data() {
     return {
-      pixels: []
+      pixels: [],
     }
   },
   computed: {
     generatePixels() {
-      this.pixels = new Array(144);
-      return this.pixels;
-    }
-  }
+      this.pixels = new Array(144)
+      return this.pixels
+    },
+  },
 }
 </script>
 
 <style scoped lang="scss">
-@use "sass:math";
-@import "/assets/sass/app";
+@use 'sass:math';
+@use '/assets/sass/app';
+@use '/assets/sass/variables' as vars;
+@use '/assets/sass/common' as cm;
 
 $duration-division: 80;
 
@@ -37,13 +39,13 @@ $duration-division: 80;
 }
 
 .pixel {
-  background-color: $bg-color;
+  background-color: vars.$bg-color;
   opacity: 0;
   overflow: hidden;
   display: none;
 }
 
-@include smartphone {
+@include cm.smartphone {
   .transition {
     height: 94dvh;
     top: 0;
@@ -56,12 +58,16 @@ $duration-division: 80;
 
   @for $i from 0 through 143 {
     .pixel-#{$i} {
-      transition-delay: #{math.div(math.floor(math.div($i, 9)) + $i % 9, $duration-division) + "s"};
+      transition-delay: #{math.div(
+          math.floor(math.div($i, 9)) + $i % 9,
+          $duration-division
+        ) +
+        's'};
     }
   }
 }
 
-@include pc {
+@include cm.pc {
   .transition {
     height: 93dvh;
     top: 7dvh;
@@ -75,9 +81,12 @@ $duration-division: 80;
 
   @for $i from 0 through 143 {
     .pixel-#{$i} {
-      transition-delay: #{math.div(math.floor(math.div($i, 16)) + $i % 16, $duration-division) + "s"};
+      transition-delay: #{math.div(
+          math.floor(math.div($i, 16)) + $i % 16,
+          $duration-division
+        ) +
+        's'};
     }
   }
 }
-
 </style>
