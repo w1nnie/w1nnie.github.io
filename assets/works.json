@@ -429,7 +429,7 @@
         "ドット絵", "依頼制作"
     ]
   },
-    {
+  {
     "filename": "venice",
     "raw_ext": ".gif",
     "rawWidth": 480,
@@ -440,6 +440,32 @@
     "linkText": "",
     "tags": [
         "ドット絵"
+    ]
+  },
+  {
+    "filename": "samemaro",
+    "raw_ext": ".gif",
+    "rawWidth": 320,
+    "title": "メンタルまじめんだこ！",
+    "desc": "さめまろ。様の「メンタルまじめんだこ！」のMVのドット絵パートを担当させていただきました",
+    "date": 20250821,
+    "links": "DSiKgIVVLAQ",
+    "linkText": "",
+    "tags": [
+        "ドット絵", "依頼制作", "MV"
+    ]
+  },
+  {
+    "filename": "kamitabaneruko",
+    "raw_ext": ".gif",
+    "rawWidth": 384,
+    "title": "紙束ねるこ様 配信ED",
+    "desc": "すぺしゃりて所属、紙束ねるこ様の配信EDドット絵アニメーションを制作させていただきました。",
+    "date": 20250923,
+    "links": "",
+    "linkText": "https://youtu.be/PNBmiXLn9u0?t=1908",
+    "tags": [
+        "ドット絵", "依頼制作"
     ]
   }
 ]
