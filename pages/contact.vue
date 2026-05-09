@@ -13,29 +13,25 @@
           .sample
             img(src="images/contact/small_1.png")
             img(src="images/contact/small_2.png")
-          .text 5000<span class="span">円</span>
         .item.price.b
           .sample
             img(src="images/contact/big_1.png")
             img(src="images/contact/big_2.png")
-          .text 15000<span class="span">円</span>
         .item.anime.pc-only アニメーション<br>あり
         .item.price.c.small
           .sample
             img(src="images/contact/small_anime_1.gif")
             img(src="images/contact/small_anime_2.gif")
-          .text 10000<span class="span">円~</span>
 
         .item.price.d
           .sample
             img(src="images/gallery/steria_forest.gif")
             img(src="images/gallery/steria_room.gif")
-          .text 30000<span class="span">円~</span>
         .item.size.sp-only.e 小サイズ<br>アニメなし
         .item.size.sp-only.f 小サイズ<br>アニメあり
         .item.size.sp-only.g 大サイズ<br>アニメなし
         .item.size.sp-only.h 大サイズ<br>アニメあり
-      .caution デザインを考案する必要がある場合、表示金額とは別途のデザイン料をいただきます。<br>アニメーションについてはフレーム数の多さ(滑らかさ)によって上乗せする場合があります。<br>MVも制作可能です。カット数や演出及び報酬は要相談です。 <br>相談を経てお見積りしますので気軽にご連絡ください。
+      .caution 基本的に希望報酬については要相談です。<br>アニメーションについてはフレーム数の多さ(滑らかさ)によって上乗せする場合があります。<br>MVは簡単な演出・リリックモーションなら制作可能です。<br>相談を経てお見積りしますので気軽にご連絡ください。
       .mv-container
     .head.flow-head 制作の流れ
     .flow
@@ -53,8 +49,8 @@
         .text 完成後、振込先を送りますので入金をお願いします。<br>入金確認後に完成品を渡します。
       .arrow
     .mail-text
-      .second-head メール文面の必要事項
-      .point ・制作物について <span class="subtext">サイズやアニメーションの有無、参考画像や用途などなるべく詳細に</span> <br>・納期 <span class="subtext">いつまでに制作すればよいか</span> <br>・振り込み方法 <span class="subtext">paypalまたは銀行振込</span> <br>・連絡の取りやすい媒体 <span class="subtext">XまたはDiscordまたはメール</span> <br>・配信に載せてもよいか <span class="subtext">活動の一環で配信をしています 情報を出したくない場合はいいえの意思表示を</span>
+      .second-head メール文面にあると嬉しい事項
+      .point ・制作物について <span class="subtext">用途やサイズ、アニメーションの有無などなるべく詳細に</span> <br>・納期 <span class="subtext">いつまでに制作すればよいか</span> <br>・振り込み方法 <span class="subtext">銀行振込またはpaypal</span> <br>・連絡の取りやすい媒体 <span class="subtext">XまたはDiscordまたはメール</span> <br>・配信に載せてもよいか <span class="subtext">活動の一環で配信をしています 特に記載なければ配信には載せません</span>
     .mail-caution 以上確認しましたら、下記のメールアドレスにご連絡ください。<br>また企業様はこの限りではありません。要件と報酬の提示の上ご連絡をお願いします。
     .mail-address wh.negi@gmail.com
 </template>

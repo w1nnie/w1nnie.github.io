@@ -35,8 +35,8 @@ export default {
     return {
       width: 0,
       worksData,
-      tagList: ['ドット絵', '依頼制作', 'MV', 'プログラミング'],
-      displayTagList: ['ドット絵', '依頼制作', 'MV', 'プログラミング'],
+      tagList: ['依頼制作', 'ドット絵', 'MV', 'Webアプリ'],
+      displayTagList: ['依頼制作', 'ドット絵', 'MV', 'Webアプリ'],
       activeTagFlags: [false, false, false],
       activeTagIndex: -1,
       oldActiveTagIndex: 0,
