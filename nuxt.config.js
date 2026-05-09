@@ -62,6 +62,19 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
+  hooks: {
+    build: {
+      before() {
+        require('./scripts/collect-font-chars')()
+      },
+    },
+    generate: {
+      before() {
+        require('./scripts/collect-font-chars')()
+      },
+    },
+  },
+
   generate: {
     dir: 'docs'
   }
