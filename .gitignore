@@ -88,3 +88,7 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Build-time generated assets
+/assets/generated/
+

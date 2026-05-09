@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "collect-font-chars": "node scripts/collect-font-chars.js",
+    "predev": "node scripts/collect-font-chars.js",
+    "prebuild": "node scripts/collect-font-chars.js",
+    "pregenerate": "node scripts/collect-font-chars.js",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
