@@ -7,7 +7,6 @@
     transition-group.graphics-item-container(name="filter")
     .img-grid(:style="responsiveColumns")
       .item(v-for="(item, index) in sortedData"
-      :style="{height: itemHeight}"
       :key="item.date"
       @click="openModal(item)")
         img.item-img(tabindex=-1 :style="{objectPosition: item.position}" :src="require(`/static/images/gallery/${item.filename}${item.raw_ext}`)")
@@ -161,24 +160,13 @@ export default {
       });
       return data;
     },
-    responsiveColumns: function () {
+    responsiveColumns() {
       if (this.width > 1000) {
-        // this.columns = 5;
-        return {};
+        return { gridTemplateColumns: 'repeat(5, 1fr)' };
       } else if (this.width > 768) {
-        return {};
+        return { gridTemplateColumns: 'repeat(4, 1fr)' };
       } else {
-        return {};
-      }
-    },
-    itemHeight: function () {
-      if (this.width > 1000) {
-        // this.columns = 5;
-        return {};
-      } else if (this.width > 768) {
-        return {};
-      } else {
-        return {};
+        return { gridTemplateColumns: 'repeat(2, 1fr)' };
       }
     },
     player() {
@@ -463,7 +451,8 @@ export default {
     top: 0;
 
     .img-grid {
-      column-gap: 3vw;
+      padding: 4vw;
+      column-gap: 4vw;
     }
   }
 
