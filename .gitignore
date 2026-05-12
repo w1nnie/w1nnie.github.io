@@ -92,3 +92,6 @@ sw.*
 # Build-time generated assets
 /assets/generated/
 
+# Claude Code local state
+.claude/
+
