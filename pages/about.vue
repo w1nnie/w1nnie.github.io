@@ -260,8 +260,13 @@ export default Vue.extend({
 
 @include cm.smartphone {
   .about-container {
-    background-image: none;
-    background-color: vars.$bg-color;
+    @extend %grid-sp;
+
+    display: block;
+    overflow: visible;
+    height: auto;
+    min-height: 93vh;
+    padding-bottom: 8dvh;
   }
 
   .pixel-container {
@@ -273,12 +278,13 @@ export default Vue.extend({
   }
 
   .property {
-    position: absolute;
+    position: static;
   }
 
   .about-property {
     position: relative;
-    height: 85vh;
+    height: auto;
+    min-height: 85vh;
     margin-top: 3dvh;
     margin-bottom: 6dvh;
     transform: translate(0, 0);
@@ -287,11 +293,7 @@ export default Vue.extend({
   }
 
   .profile-container {
-    height: 50vw;
-  }
-
-  .direction-container {
-    margin-bottom: 10vh;
+    min-height: 50vw;
   }
 }
 </style>
