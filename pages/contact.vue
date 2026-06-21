@@ -344,6 +344,13 @@ export default Vue.extend({
           }
         }
 
+        .b,
+        .d {
+          img {
+            height: 14vh;
+          }
+        }
+
         .price {
           font-size: 5vw;
 
