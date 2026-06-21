@@ -260,8 +260,22 @@ export default Vue.extend({
 
 @include cm.smartphone {
   .about-container {
-    @extend %grid-sp;
-
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        vars.$grid-color,
+        vars.$grid-color 1px,
+        transparent 1px,
+        transparent 4vw
+      ),
+      repeating-linear-gradient(
+        0deg,
+        vars.$grid-color,
+        vars.$grid-color 1px,
+        vars.$bg-color 1px,
+        vars.$bg-color 4vw
+      );
+    background-size: 8vw;
     display: block;
     overflow: visible;
     height: auto;
