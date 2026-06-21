@@ -16,7 +16,6 @@
         .item.price.b
           .sample
             img(src="images/contact/big_1.png")
-            img(src="images/contact/big_2.png")
         .item.anime.pc-only アニメーション<br>あり
         .item.price.c.small
           .sample
@@ -26,7 +25,6 @@
         .item.price.d
           .sample
             img(src="images/gallery/steria_forest.gif")
-            img(src="images/gallery/steria_room.gif")
         .item.size.sp-only.e 小サイズ<br>アニメなし
         .item.size.sp-only.f 小サイズ<br>アニメあり
         .item.size.sp-only.g 大サイズ<br>アニメなし
