@@ -470,23 +470,31 @@ export default {
 
       .title-container {
         width: 90%;
+        align-items: center;
 
         .title {
           width: 80%;
-          height: 8vw;
-          line-height: calc(8vw - 5px);
+          height: auto;
+          min-height: 8vw;
+          line-height: 1.3;
           font-size: 4vw;
+          padding-block: 1vw;
+          word-break: break-word;
         }
 
         .link-button {
           height: 8vw;
           width: 8vw;
+          flex-shrink: 0;
         }
       }
 
       .description {
-        height: 12vw;
+        height: auto;
+        min-height: 12vw;
+        line-height: 1.4;
         font-size: 3vw;
+        word-break: break-word;
       }
     }
   }
