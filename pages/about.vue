@@ -266,14 +266,14 @@ export default Vue.extend({
         vars.$grid-color,
         vars.$grid-color 1px,
         transparent 1px,
-        transparent 4vw
+        transparent 8vw
       ),
       repeating-linear-gradient(
         0deg,
         vars.$grid-color,
         vars.$grid-color 1px,
         vars.$bg-color 1px,
-        vars.$bg-color 4vw
+        vars.$bg-color 8vw
       );
     background-size: 8vw;
     display: block;
@@ -281,6 +281,11 @@ export default Vue.extend({
     height: auto;
     min-height: 93vh;
     padding-bottom: 8dvh;
+  }
+
+  .square1,
+  .square2 {
+    display: none;
   }
 
   .pixel-container {
@@ -299,8 +304,7 @@ export default Vue.extend({
     position: relative;
     height: auto;
     min-height: 85vh;
-    margin-top: 3dvh;
-    margin-bottom: 6dvh;
+    margin: 3dvh auto 6dvh;
     transform: translate(0, 0);
     top: auto;
     left: auto;

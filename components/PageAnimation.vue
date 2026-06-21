@@ -124,8 +124,10 @@ img {
       'b'
       'f';
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1%;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    gap: 3%;
+    height: auto;
   }
 
   .text-container {
