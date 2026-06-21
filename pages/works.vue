@@ -106,7 +106,10 @@ export default {
       } else {
         this.textDisplay = 'block';
       }
-      if (this.width > 767) {
+      const isYoutube = item.links !== '';
+      if (isYoutube) {
+        this.modalWidth = this.width > 767 ? '50vw' : '100vw';
+      } else if (this.width > 767) {
         if (item.rawWidth != 0) {
           let w =
             item.rawWidth * Math.floor((this.width * 0.5) / item.rawWidth);
