@@ -138,8 +138,8 @@ export default Vue.extend({
         }
 
         img {
-          max-height: 22vh;
-          height: 10vw;
+          max-height: 26vh;
+          height: 12vw;
           border: solid 1px vars.$deep-grid-color;
           image-rendering: pixelated;
         }
@@ -334,13 +334,13 @@ export default Vue.extend({
 
         .item {
           img {
-            height: 7.7vh;
+            height: 9.5vh;
           }
         }
 
         .small {
           img {
-            height: 10vh;
+            height: 12vh;
           }
         }
 
